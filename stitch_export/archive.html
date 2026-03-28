@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Archive | 3Dream Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="main.js" defer></script>
+</head>
+<body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <div class="grain-overlay"></div>    <!-- Navigation -->
+    <nav class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img src="images/logo.png" alt="3Dream Studios Logo"
+                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
+                <span class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
+                    3Dream Studios
+                </span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="gallery.html">Galería</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="universe.html">Universo</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="process.html">Proceso</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="archive.html">Archivo</a>
+            </div>
+            <a href="connect.html" class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
+                Conectar
+            </a>
+        </div>
+    </nav>
+    <main class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-xl px-8 mx-auto fade-up-element text-center">
+        <!-- Background Auras -->
+        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none" data-speed="40"></div>
+        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none" data-speed="-20"></div>
+        <h1 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-8">
+            THE <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">LABORATORIO</span>
+        </h1>
+        <p class="font-body italic text-on-surface-variant text-xl mb-16 max-w-2xl mx-auto">Recolección de las ideas abstractas: arte bruto, iluminaciones experimentales, y entornos liminales del estudio.</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
+                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">Render_001.exr</span>
+            </div>
+             <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
+                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">ShaderCode_v3</span>
+            </div>
+             <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
+                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">LightBake_Test</span>
+            </div>
+            <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
+                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">GeoNode_Mess</span>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream Studios</span>
+                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
+                    © 2026 3DREAM STUDIOS. LA FRONTERA LÚCIDA.
+                </p>
+            </div>
+            <div class="flex gap-8 border-none">
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300" href="#">Términos</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300" href="#">Privacidad</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300" href="#">Twitter</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300" href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
+            </div>
+            <button class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </button>
+        </div>
+    </footer>
+</body></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>3Dream Studios | The Lucid Frontier</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- External CSS -->
+    <link href="styles.css" rel="stylesheet" />
+    <!-- Tailwind CSS CDN Configured -->
+    <script src="tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- JS Logic -->
+    <script src="main.js" defer></script>
+</head>
+
+<body
+    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <!-- Overlay Grain -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img src="images/logo.png" alt="3Dream Studios Logo"
+                    class="h-12 w-auto group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
+                <span
+                    class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]">
+                    3Dream Studios
+                </span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="gallery.html">Galería</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="universe.html">Universo</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="process.html">Proceso</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="archive.html">Archivo</a>
+            </div>
+            <a href="connect.html"
+                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
+                Conectar
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden">
+        <!-- Background Aura -->
+        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"
+            data-speed="40"></div>
+        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none"
+            data-speed="-20"></div>
+
+        <div class="container max-w-screen-2xl px-8 z-10 text-center flex flex-col items-center fade-up-element">
+            <h1
+                class="font-headline font-black text-6xl md:text-[8rem] lg:text-[11rem] leading-[0.85] tracking-tighter uppercase drop-shadow-2xl">
+                <span class="text-[#E0F7FA] block">
+                    3DREAM
+                </span>
+
+                <span
+                    class="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#448AFF] via-[#B34BFF] to-[#FF00E5] pb-2 md:pb-6">
+                    STUDIOS
+                </span>
+            </h1>
+            <div class="mt-8 max-w-2xl fade-up-element" style="transition-delay: 0.2s;">
+                <p class="font-body italic text-xl md:text-2xl text-on-surface-variant leading-relaxed">
+                    Bienvenidos a donde la realidad es solo el punto de partida.
+                </p>
+            </div>
+            <br>
+            <br>
+            <!-- Hero Image / Portal Element -->
+            <div class="mt-16 relative w-full max-w-4xl aspect-video flex items-center justify-center fade-up-element"
+                style="transition-delay: 0.4s;">
+                <div
+                    class="absolute inset-0 bg-surface-variant/40 backdrop-blur-3xl rounded-xl border border-outline-variant/30 glass-edge overflow-hidden">
+                    <img alt="Studio Showcase Render" class="w-full h-full object-cover mix-blend-overlay opacity-80"
+                        src="renders/toma5.png" />
+                </div>
+                <!-- Floating 3D Portal Icon -->
+                <div class="absolute -top-12 md:-top-20 animate-bounce duration-[3000ms]">
+                    <div
+                        class="bg-surface-variant/60 backdrop-blur-2xl p-8 rounded-full border border-primary-container/30 shadow-[0_0_50px_rgba(0,242,255,0.2)]">
+                        <a href="/stitch_export/gallery.html"><span
+                                class="material-symbols-outlined text-6xl text-primary-container"
+                                style="font-variation-settings: 'FILL' 1;">deployed_code</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar Marquee -->
+    <div class="trust-bar-container z-20 relative fade-up-element">
+        <div
+            class="trust-bar-content font-headline font-bold uppercase text-2xl tracking-widest text-outline-variant/50 flex whitespace-nowrap">
+            <span>Visual Arts</span> <span class="text-[#00E5FF]/50 mx-4">•</span>
+            <span>3D Artist & Designer</span> <span class="text-[#B34BFF]/50 mx-4">•</span>
+            <span>Desarrollo VR/AR</span> <span class="text-[#FF00E5]/50 mx-4">•</span>
+            <span>CGI</span> <span class="text-[#00E5FF]/50 mx-4">•</span>
+            <span>Desarrollo en Unity</span> <span class="text-[#00E5FF]/5 0 mx-4">•</span>
+            <span>Diseño Digital</span> <span class="text-[#B34BFF]/50 mx-4">•</span>
+            <span>Modelado 3D</span> <span class="text-[#FF00E5]/50 mx-4">•</span>
+            <span>Integración de IA</span> <span class="text-[#00E5FF]/50 mx-4">•</span>
+            <span>Planeación Estratégica</span> <span class="text-[#B34BFF]/50 mx-4">•</span>
+
+            <span>Visual Arts</span> <span class="text-[#00E5FF]/50 mx-4">•</span>
+            <span>3D Artist & Designer</span> <span class="text-[#B34BFF]/50 mx-4">•</span>
+            <span>Desarrollo VR/AR</span> <span class="text-[#FF00E5]/50 mx-4">•</span>
+            <span>CGI</span> <span class="text-[#00E5FF]/50 mx-4">•</span>
+            <span>Desarrollo en Unity</span> <span class="text-[#00E5FF]/5 0 mx-4">•</span>
+            <span>Diseño Digital</span> <span class="text-[#B34BFF]/50 mx-4">•</span>
+            <span>Modelado 3D</span> <span class="text-[#FF00E5]/50 mx-4">•</span>
+            <span>Integración de IA</span> <span class="text-[#00E5FF]/50 mx-4">•</span>
+            <span>Planeación Estratégica</span> <span class="text-[#B34BFF]/50 mx-4">•</span>
+        </div>
+    </div>
+
+    <!-- Bento Showcase Section -->
+    <section class="py-24 bg-surface-container-low overflow-hidden">
+        <div class="container max-w-screen-2xl px-8 mx-auto">
+            <div class="mb-20 fade-up-element">
+                <h2 class="font-headline text-5xl font-bold uppercase tracking-tighter text-on-surface mb-4">Obras
+                    Destacadas</h2>
+                <div class="h-1 w-24 bg-primary-container shadow-[0_0_10px_rgba(0,242,255,0.8)]"></div>
+            </div>
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-full md:h-[900px]">
+                <!-- Large Feature Card -->
+                <a href="gallery.html#neon-void"
+                    class="block md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-surface-container-high border border-outline-variant/15 hover:border-primary-container/40 transition-all duration-500 fade-up-element cursor-pointer"
+                    style="transition-delay: 0.1s;">
+                    <img alt="Project Voocho"
+                        class="w-full h-full object-cover transition-all duration-700 md:scale-105 group-hover:scale-100"
+                        src="renders/b3.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-10 w-full transform group-hover:translate-y-[-10px] transition-transform duration-500">
+                        <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-2 block">
+                            Técnica Avanzada
+                        </span>
+                        <h3 class="font-headline text-4xl font-bold text-on-surface mb-4">
+                            FOTOREALISMO
+                        </h3>
+                        <p class="font-body italic text-on-surface-variant max-w-md">
+                            Cuando la obsesión por el detalle se encuentra con la iluminación dramática. Modelado de
+                            precisión y texturizado avanzado que convierten la nostalgia en una experiencia visual de
+                            alto impacto.
+                        </p>
+                    </div>
+                </a>
+                <!-- Secondary Card -->
+                <a href="gallery.html#liquid-state"
+                    class="block md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-high border border-outline-variant/15 hover:border-secondary-container/40 transition-all duration-500 fade-up-element cursor-pointer"
+                    style="transition-delay: 0.2s;">
+                    <img alt="Project Chess Render (Fallen Piece and Glossy Reflections)"
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700"
+                        src="renders/ajedrez1.png" />
+                    <div class="absolute inset-0 flex flex-col justify-center px-10">
+                        <span class="font-label text-secondary text-xs tracking-widest uppercase mb-2 block">
+                            Texturizado PBR Avanzado
+                        </span>
+                        <h3
+                            class="font-headline text-3xl font-bold text-on-surface group-hover:text-secondary-container transition-colors">
+                            REFLEJOS FRAGMENTADOS
+                        </h3>
+                        <p class="font-body italic text-on-surface-variant max-w-md">
+                            Cuando haces algo con pasion se nota y se siente, la realidad se convierte en una
+                            experiencia visual satisfactoria.
+                        </p>
+                    </div>
+                </a>
+                <!-- Small Card A -->
+                <a href="gallery.html#cyber-floral"
+                    class="block relative group overflow-hidden rounded-xl bg-surface-container-high border border-outline-variant/15 hover:border-primary-container/40 transition-all duration-500 fade-up-element cursor-pointer"
+                    style="transition-delay: 0.3s;">
+                    <img alt="Project Chess Render (Fallen Piece and Glossy Reflections)"
+                        class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700"
+                        src="renders/Angel02.jpg" />
+                    <div class="p-8 h-full flex flex-col justify-between">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-surface-variant flex items-center justify-center text-primary-container group-hover:shadow-[0_0_15px_rgba(0,242,255,0.5)] transition-shadow">
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <div>
+                            <h4 class="font-headline font-bold text-xl text-on-surface">BOSQUE CIBERNÉTICO</h4>
+                            <p class="font-label text-xs text-on-surface-variant mt-2">Algoritmo En Vegetación</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- Small Card B -->
+                <a href="gallery.html#orbital"
+                    class="block relative group overflow-hidden rounded-xl bg-surface-container-high border border-outline-variant/15 hover:border-primary-container/40 transition-all duration-500 fade-up-element cursor-pointer"
+                    style="transition-delay: 0.4s;">
+                    <img alt="Alien Concept"
+                        class="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-500"
+                        src="renders/alien.jpeg" />
+                    <div class="absolute inset-0 p-8 flex flex-col justify-between">
+                        <span
+                            class="material-symbols-outlined text-secondary-container group-hover:text-primary-container transition-colors">bubble_chart</span>
+                        <h4 class="font-headline font-bold text-xl text-on-surface">ÓRBITAS ESTELARES</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Pillars Section -->
+    <section class="py-32 relative overflow-hidden">
+        <div class="container max-w-screen-2xl px-8 mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="space-y-6 fade-up-element" style="transition-delay: 0.1s;">
+                <span class="material-symbols-outlined text-4xl text-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">view_in_ar</span>
+                <h3 class="font-headline text-3xl font-bold uppercase tracking-tighter text-on-surface">Diseño
+                    Dimensional</h3>
+                <p class="font-body italic text-on-surface-variant leading-relaxed">
+                    Creando interfaces volumétricas que rompen el paradigma de la pantalla plana. Creamos espacios que
+                    los usuarios pueden sentir
+                    a través de sus retinas.
+                </p>
+            </div>
+            <div class="space-y-6 fade-up-element" style="transition-delay: 0.2s;">
+                <span class="material-symbols-outlined text-4xl text-secondary"
+                    style="font-variation-settings: 'FILL' 1;">blur_on</span>
+                <h3 class="font-headline text-3xl font-bold uppercase tracking-tighter text-on-surface">UI Atmosférica
+                </h3>
+                <p class="font-body italic text-on-surface-variant leading-relaxed">
+                    La UI no es solo un esquema; es una atmósfera. Usamos iluminación, ruido y profundidad para evocar
+                    resonancia emocional
+                    dentro de los productos digitales.
+                </p>
+            </div>
+            <div class="space-y-6 fade-up-element" style="transition-delay: 0.3s;">
+                <span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim"
+                    style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                <h3 class="font-headline text-3xl font-bold uppercase tracking-tighter text-on-surface">Futurist
+                    Strategy</h3>
+                <p class="font-body italic text-on-surface-variant leading-relaxed">
+                    Expandiendo el esquema digital, conectamos el talento tecnológico con la nueva era del internet
+                    espacial y de simulaciones.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-8 fade-up-element">
+        <div
+            class="max-w-screen-xl mx-auto rounded-3xl bg-surface-container-highest p-1 md:p-[2px] bg-gradient-to-br from-primary-container to-secondary-container overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,242,255,0.3)]">
+            <div
+                class="bg-surface-container-highest rounded-[calc(1.5rem-2px)] py-20 px-10 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+                    <img alt="Noise" class="w-full h-full object-cover mix-blend-screen"
+                        data-alt="Abstract colorful noise and distortion pattern for background texture"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMkQx9yluZrdbjm2WarWR5vMi_8GoooHaYkhdAAT9xn571s76Jj8TT7ESFQYTJEZMr8uYbUSj_Qrj0RjC4nQ0fYOyI8XEGxn8-er34smRZazNhkabBwa0Q62PCV1zD9n0BP0i8lupN-8gAVUMSh9SN1QKvoej-XwSxLg_YxReao5ZeKbWayFrLVDGVlSRpaYbL1mWjl6IwGGv-S3_naRxkHU0NeKAuGpGHuQ6U2qYwjRowBbDOBupl5UZKvvybEQ68PjE7323nkuw" />
+                </div>
+                <h2
+                    class="font-headline text-5xl md:text-7xl font-black text-on-surface uppercase tracking-tight mb-8 relative z-10">
+                    ¿LISTO PARA DESPERTAR AL SUEÑO VIRTUAL?
+                </h2>
+                <p class="font-body italic text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto relative z-10">
+                    Integrate a nuestro pulso corporativo y dale forma a realidades visuales insólitas combinadas con
+                    alta tecnología.
+                </p>
+                <a href="connect.html"
+                    class="inline-block relative z-10 bg-primary-container text-on-primary px-12 py-5 font-headline font-bold text-lg uppercase tracking-[0.2em] rounded shadow-[0_0_30px_rgba(0,242,255,0.4)] hover:scale-105 active:scale-95 transition-all duration-300">
+                    Iniciar El Enlace
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
+                    Studios</span>
+                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
+                    © 2026 3DREAM STUDIOS. LA FRONTERA LÚCIDA.
+                </p>
+            </div>
+            <div class="flex gap-8 border-none">
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="#">Términos</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="#">Privacidad</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="#">Twitter</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
+            </div>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </button>
+        </div>
+    </footer>
+</body>
+
+</html>

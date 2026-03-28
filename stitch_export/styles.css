@@ -1,0 +1,149 @@
+body {
+    /* Color base súper oscuro para dar profundidad infinita */
+    background-color: #05010f;
+
+    /* Capa 1: Resplandor superior (tu morado original) */
+    /* Capa 2: Líneas horizontales de la cuadrícula (toque Cian) */
+    /* Capa 3: Líneas verticales de la cuadrícula (toque Magenta) */
+    background-image:
+        radial-gradient(circle at 50% -20%, #2d084a 0%, transparent 70%),
+        linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 0, 229, 0.04) 1px, transparent 1px);
+
+    /* Tamaño de la cuadrícula: ajusta los "40px" si la quieres más grande o pequeña */
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+    background-position: center top, center center, center center;
+
+    /* Esto hace que el fondo se quede quieto y parezca profundo cuando haces scroll */
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* Asegura que cubra toda la pantalla siempre */
+}
+
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.text-glow-primary {
+    text-shadow: 0 0 12px rgba(0, 242, 255, 0.4);
+}
+
+.glass-edge {
+    box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.1), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations that we'll trigger from main.js */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Trust Bar Marquee */
+.trust-bar-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(20, 20, 20, 0.5);
+}
+
+.trust-bar-content {
+    display: inline-flex;
+    animation: marquee 30s linear infinite;
+    gap: 4rem;
+    padding-left: 4rem;
+    /* Match the gap */
+    align-items: center;
+}
+
+.trust-bar-container:hover .trust-bar-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    /* We will duplicate the content inside to loop seamlessly */
+}
+
+/* Basic Form Styling for Connect page */
+.cyber-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+    outline: none;
+    border-bottom-color: #00f2ff;
+    box-shadow: 0 10px 10px -10px rgba(0, 242, 255, 0.4);
+}
+
+/* Fallback colors para garantizar legibilidad óptima (Blancos y grises claros) */
+body,
+.text-on-surface {
+    color: #ffffff !important;
+}
+
+.text-on-surface-variant {
+    color: #d1d5db !important;
+    /* Gris claro (equivalente a gray-300) */
+}
+
+.bg-surface-container-low {
+    background-color: #171717 !important;
+}
+
+.bg-surface-container-high {
+    background-color: #262626 !important;
+}
+
+.bg-surface-container-highest {
+    background-color: #333333 !important;
+}
+
+.text-primary {
+    color: #e1fdff !important;
+}
+
+.bg-surface {
+    background-color: #131313 !important;
+}
