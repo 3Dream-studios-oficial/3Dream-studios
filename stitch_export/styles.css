@@ -101,14 +101,32 @@ html {
 
 /* Basic Form Styling for Connect page */
 .cyber-input {
-    background: transparent;
+    background: rgb(31, 31, 31);
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    color: #00f2ff !important;
+    /* Letra Cyan brillante al escribir */
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 1rem 1rem;
     font-family: 'Space Grotesk', sans-serif;
     transition: all 0.3s ease;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.cyber-input::placeholder {
+    color: #666691 !important;
+    /* Gris claro opaco para el placeholder */
+    opacity: 1 !important;
+    /* Fuerza la visibilidad en todos los navegadores */
+}
+
+.cyber-input:-ms-input-placeholder {
+    color: #666691 !important;
+}
+
+.cyber-input::-ms-input-placeholder {
+    color: #666691 !important;
 }
 
 .cyber-input:focus {
@@ -145,5 +163,5 @@ body,
 }
 
 .bg-surface {
-    background-color: #131313 !important;
+    background-color: #2e2a30 !important;
 }
