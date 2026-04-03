@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Combi Clásica | 3Dream Studios</title>
+    <!-- SEO & Marketing Meta Tags -->
+    <meta name="description"
+        content="Detalle del proyecto Combi Clásica: Un viaje retro a través del 3D, iluminación volumétrica y texturizado PBR." />
+    <meta name="keywords" content="3Dream Studios, Combi 3D, Volkswagen T1, Render, Blender, Cycles" />
+    <meta name="author" content="3Dream Studios" />
+    <!-- Open Graph / Meta Social Media -->
+    <meta property="og:title" content="Proyecto: Combi Clásica | 3Dream Studios" />
+    <meta property="og:description" content="Nostalgia y técnica en cada render de la Combi Clásica." />
+    <meta property="og:image"
+        content="https://brandonurielcalixtog.github.io/Portafolio/stitch_export/renders/combi04.jpeg" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body
+    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <div class="grain-overlay"></div>
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <img src="images/logo.png" alt="3Dream Studios Logo"
+                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
+                <span
+                    class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
+                    3Dream Studios
+                </span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="gallery.html">Galería</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="universe.html">Universo</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="process.html">Proceso</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="archive.html">Archivo</a>
+            </div>
+            <a href="cotizar.html"
+                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
+                Cotizar
+            </a>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <header class="relative pt-32 pb-16 overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="fade-up-element">
+                <a href="gallery.html"
+                    class="inline-flex items-center gap-2 text-primary-container/80 hover:text-white transition-colors mb-4 uppercase font-headline text-xs tracking-widest">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span> Regresar a Galería
+                </a>
+                <h1
+                    class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-6">
+                    COMBI <span
+                        class="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#448AFF] via-[#B34BFF] to-[#FF00E5] pb-2 md:pb-6">ESENCIA</span>
+                </h1>
+                <p class="font-body italic text-on-surface-variant text-xl mb-8 leading-relaxed max-w-xl">
+                    Este proyecto es un tributo a la era dorada del viaje por carretera. Un ejercicio técnico enfocado
+                    en capturar texturas de pintura desgastada, metales oxidados y la calidez de la luz de atardecer.
+                </p>
+                <!-- Technical Specs Mini Grid -->
+                <div class="grid grid-cols-2 gap-6 border-t border-white/10 pt-8">
+                    <div>
+                        <p class="font-label text-xs uppercase tracking-widest text-[#00E5FF] mb-1">Software</p>
+                        <p class="font-body text-on-surface">Blender / Eevee & Cycles</p>
+                    </div>
+                    <div>
+                        <p class="font-label text-xs uppercase tracking-widest text-[#00E5FF] mb-1">Iluminación</p>
+                        <p class="font-body text-on-surface">Volumetric Atmosphere</p>
+                    </div>
+                    <div>
+                        <p class="font-label text-xs uppercase tracking-widest text-[#00E5FF] mb-1">Texturas</p>
+                        <p class="font-body text-on-surface">Substance Painter Workflow</p>
+                    </div>
+                    <div>
+                        <p class="font-label text-xs uppercase tracking-widest text-[#00E5FF] mb-1">Año</p>
+                        <p class="font-body text-on-surface">2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden glass-edge fade-up-element" style="transition-delay:0.2s">
+                <img src="renders/combi04.jpeg" alt="Combi Hero Render"
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-1000">
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-Gallery Grid -->
+    <section class="max-w-screen-2xl mx-auto px-8 py-24 border-t border-white/5">
+        <h2
+            class="font-headline text-3xl font-bold uppercase tracking-widest text-secondary-container mb-12 flex items-center gap-4">
+            <span class="w-12 h-[1px] bg-secondary-container"></span> Vista General
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element"><img src="renders/combi.jpeg"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-duration-700"></div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element"><img src="renders/combi02.jpeg"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-duration-700"></div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element"><img src="renders/combi03.jpeg"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-duration-700"></div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element"><img src="renders/combi05.jpeg"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-duration-700"></div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element"><img src="renders/combi06.jpeg"
+                    class="w-full h-64 object-cover group-hover:scale-110 transition-duration-700"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 mt-auto">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
+                    Studios</span>
+                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">© 2026 3DREAM STUDIOS. HECHO
+                    CON PASIÓN.</p>
+            </div>
+            <div class="flex gap-8 border-none">
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 transition-all font-headline text-sm"
+                    href="gallery.html">Galería</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 transition-all font-headline text-sm"
+                    href="universe.html">Universo</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 transition-all font-headline text-sm"
+                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
