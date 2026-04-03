@@ -3,7 +3,18 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Archive | 3Dream Studios</title>
+    <title>Archivo | 3Dream Studios</title>
+    <!-- SEO & Marketing Meta Tags -->
+    <meta name="description" content="El laboratorio de 3Dream Studios: Recolección de ideas abstractas, arte bruto y renders experimentales del estudio creativo." />
+    <meta name="keywords" content="3Dream Studios, Archivo 3D, Arte Experiemental CGI, Renders, Work in Progress" />
+    <meta name="author" content="3Dream Studios" />
+    <!-- Open Graph / Meta Social Media -->
+    <meta property="og:title" content="Archivo de Ideas | 3Dream Studios" />
+    <meta property="og:description" content="El laboratorio oscuro: renders experimentales y shaders en progreso." />
+    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/stitch_export/images/logo.png" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="styles.css" rel="stylesheet"/>
@@ -43,17 +54,25 @@
         <p class="font-body italic text-on-surface-variant text-xl mb-16 max-w-2xl mx-auto">Recolección de las ideas abstractas: arte bruto, iluminaciones experimentales, y entornos liminales del estudio.</p>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
-                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">Render_001.exr</span>
+            <div onclick="alert('Acceso Restringido: El archivo Render_001.exr requiere permisos de nivel 3.')" class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
+                <span class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">lock</span>
+                <span class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">Render_001.exr</span>
+                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
-             <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
-                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">ShaderCode_v3</span>
+             <div onclick="alert('Archivos encriptados. Ingrese clave maestra para ver ShaderCode_v3.')" class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
+                <span class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">lock</span>
+                <span class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">ShaderCode_v3</span>
+                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
-             <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
-                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">LightBake_Test</span>
+             <div onclick="alert('Acceso Restringido: Parámetros de iluminación clasificados.')" class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
+                <span class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">lock</span>
+                <span class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">LightBake_Test</span>
+                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
-            <div class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-colors group cursor-pointer">
-                <span class="font-label text-xs text-outline opacity-50 group-hover:opacity-100 transition-opacity">GeoNode_Mess</span>
+            <div onclick="alert('Advertencia: El archivo GeoNode_Mess.blend se encuentra corrupto o en mantenimiento.')" class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
+                <span class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">warning</span>
+                <span class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">GeoNode_Mess</span>
+                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </div>
         </div>
     </main>
