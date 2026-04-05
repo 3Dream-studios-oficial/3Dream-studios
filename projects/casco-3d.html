@@ -126,25 +126,19 @@
     <main class="flex-grow pt-32 pb-16 flex flex-col">
         <div class="container max-w-screen-2xl px-8 mx-auto flex-grow flex flex-col lg:flex-row gap-12">
             <!-- Left Side: 3D Viewer Container -->
-            <div class="flex-grow min-h-[500px] lg:h-auto rounded-3xl overflow-hidden glass-edge relative bg-neutral-900/50 fade-up-element">
-                <model-viewer 
-                    src="../assets/models/CASCO.glb" 
-                    poster="../assets/renders/casco.png" 
-                    alt="Casco Futurista 3D" 
-                    shadow-intensity="2" 
-                    camera-controls 
-                    auto-rotate 
-                    ar 
-                    touch-action="pan-y">
-                    
-                    <div class="progress-bar slot="poster">
+            <div
+                class="flex-grow min-h-[500px] lg:h-auto rounded-3xl overflow-hidden glass-edge relative bg-neutral-900/50 fade-up-element">
+                <model-viewer src="../assets/models/CASCO.glb" poster="../assets/renders/casco.png"
+                    alt="Casco Futurista 3D" shadow-intensity="2" camera-controls auto-rotate ar touch-action="pan-y">
+
+                    <div class="progress-bar slot=" poster">
                         <div class="update-bar"></div>
                     </div>
-                    
+
                     <button slot="ar-button" id="ar-button">
                         Ver en tu espacio (AR)
                     </button>
-                    
+
                     <div id="ar-prompt">
                         <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
                     </div>
@@ -152,47 +146,61 @@
 
                 <!-- UI Overlays for 3D Viewer -->
                 <div class="absolute bottom-8 left-8 flex gap-4">
-                     <span class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-[#00E5FF]">Real-Time Render</span>
-                     <span class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-secondary-container">Interactive 4K</span>
+                    <span
+                        class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-[#00E5FF]">Real-Time
+                        Render</span>
+                    <span
+                        class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-secondary-container">Interactive
+                        4K</span>
                 </div>
             </div>
 
             <!-- Right Side: Info & Controls -->
             <div class="lg:w-1/3 flex flex-col justify-center fade-up-element" style="transition-delay: 0.2s;">
-                <a href="../gallery.html" class="inline-flex items-center gap-2 text-neutral-400 hover:text-cyan-400 transition-colors mb-6 uppercase font-headline text-xs tracking-widest">
+                <a href="../gallery.html"
+                    class="inline-flex items-center gap-2 text-neutral-400 hover:text-cyan-400 transition-colors mb-6 uppercase font-headline text-xs tracking-widest">
                     <span class="material-symbols-outlined text-sm">arrow_back</span> Regresar a Galería
                 </a>
-                
+
                 <h1 class="font-headline text-5xl font-black uppercase tracking-tighter text-white mb-6">
                     CASCO <span class="text-cyan-400">FUTURISTA</span>
                 </h1>
-                
+
                 <div class="h-1 w-24 bg-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.8)] mb-8"></div>
-                
+
                 <p class="font-body italic text-gray-300 text-lg mb-8 leading-relaxed">
-                    Un concepto de vanguardia diseñado para la era de la exploración espacial y la interfaz neuronal. 
-                    Este modelo presenta materiales compuestos avanzados, óptica polarizada y una ergonomía optimizada para entornos hostiles.
+                    Un concepto de vanguardia diseñado para la era de la exploración espacial y la interfaz neuronal.
+                    Este modelo presenta materiales compuestos avanzados, óptica polarizada y una ergonomía optimizada
+                    para entornos hostiles.
                 </p>
 
                 <div class="space-y-6">
                     <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                        <h3 class="font-headline font-bold text-cyan-300 uppercase text-sm tracking-widest mb-4 flex items-center gap-2">
-                           <span class="material-symbols-outlined text-sm">info</span> Especificaciones del Modelo
+                        <h3
+                            class="font-headline font-bold text-cyan-300 uppercase text-sm tracking-widest mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">info</span> Especificaciones del Modelo
                         </h3>
                         <ul class="space-y-3 font-body text-sm text-gray-400">
-                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Formato:</span> <span class="text-white">GLB (web optimized)</span></li>
-                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Texturizado:</span> <span class="text-white">PBR (Metallic/Roughness)</span></li>
-                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Peso:</span> <span class="text-white">1.39 MB (Ultraligero)</span></li>
-                            <li class="flex justify-between"><span>Interactividad:</span> <span class="text-white">Full rotation & AR</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Formato:</span> <span
+                                    class="text-white">GLB (web optimized)</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Texturizado:</span>
+                                <span class="text-white">PBR (Metallic/Roughness)</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Peso:</span> <span
+                                    class="text-white">1.39 MB (Ultraligero)</span></li>
+                            <li class="flex justify-between"><span>Interactividad:</span> <span class="text-white">Full
+                                    rotation & AR</span></li>
                         </ul>
                     </div>
 
                     <div class="flex gap-4">
-                        <button class="flex-grow bg-cyan-600 hover:bg-cyan-500 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl shadow-lg transition-all duration-300 active:scale-95" onclick="document.querySelector('model-viewer').activateAR()">
+                        <button
+                            class="flex-grow bg-cyan-600 hover:bg-cyan-500 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl shadow-lg transition-all duration-300 active:scale-95"
+                            onclick="document.querySelector('model-viewer').activateAR()">
                             Abrir en AR
                         </button>
-                        <a href="../cotizar.html" class="flex-grow border border-white/20 hover:border-cyan-400 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl text-center transition-all">
-                            Personalizar
+                        <a href="../cotizar.html"
+                            class="flex-grow border border-white/20 hover:border-cyan-400 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl text-center transition-all">
+                            Cotiza tu proyecto
                         </a>
                     </div>
                 </div>
@@ -202,8 +210,10 @@
 
     <!-- Footer -->
     <footer class="bg-neutral-950 w-full border-t border-white/5 pt-10 pb-10">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
-            <span class="font-headline font-bold text-neutral-100 text-sm tracking-widest uppercase">3Dream Studios</span>
+        <div
+            class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+            <span class="font-headline font-bold text-neutral-100 text-sm tracking-widest uppercase">3Dream
+                Studios</span>
             <p class="font-label text-[10px] tracking-widest uppercase text-neutral-500">
                 PROTOTIPO_CASCO_V0.8 // © 2026
             </p>

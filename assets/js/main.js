@@ -19,16 +19,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const fadeElements = document.querySelectorAll('.fade-up-element');
     fadeElements.forEach(el => observer.observe(el));
 
-    // 2. Simple Parallax for Auras in Hero
+    // 2. High-Performance Hero Animations (Scroll + Mouse)
+    const heroSection = document.getElementById('hero-section');
     const auras = document.querySelectorAll('.parallax-aura');
-    if (auras.length > 0) {
+    
+    if (heroSection) {
+        let scrollY = window.scrollY;
+        let ticking = false;
+
+        function updateHero() {
+            const heroHeight = heroSection.offsetHeight;
+            const progress = Math.min(scrollY / heroHeight, 1);
+            
+            // Efficiently update CSS variable for the entire section
+            heroSection.style.setProperty('--hero-scroll', progress.toFixed(3));
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            scrollY = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(updateHero);
+                ticking = true;
+            }
+        });
+
+        // Combined Mouse Parallax for Auras
         document.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth - 0.5;
-            const y = e.clientY / window.innerHeight - 0.5;
+            const x = (e.clientX / window.innerWidth - 0.5) * 50;
+            const y = (e.clientY / window.innerHeight - 0.5) * 50;
             
             auras.forEach(aura => {
-                const speed = aura.getAttribute('data-speed') || 50;
-                aura.style.transform = `translate(calc(-50% + ${x * speed}px), calc(-50% + ${y * speed}px))`;
+                const speed = parseFloat(aura.getAttribute('data-speed')) || 1;
+                // We update only the element's specific offset variable
+                aura.style.setProperty('--mouse-x', `${x * speed}px`);
+                aura.style.setProperty('--mouse-y', `${y * speed}px`);
             });
         });
     }

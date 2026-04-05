@@ -58,6 +58,39 @@ body {
     transform: translateY(0);
 }
 
+/* --- Hero Scroll Animations (Performance-first) --- */
+#hero-section {
+    --hero-scroll: 0;
+}
+
+#hero-content, #hero-portal, #hero-aura-1, #hero-aura-2, #scroll-indicator {
+    will-change: transform, opacity;
+}
+
+#hero-content {
+    transform: translateY(calc(var(--hero-scroll) * 150px)) scale(calc(1 - var(--hero-scroll) * 0.15));
+    opacity: calc(1 - var(--hero-scroll) * 1.8);
+}
+
+#hero-portal {
+    transform: translateY(calc(var(--hero-scroll) * 80px)) scale(calc(1 - var(--hero-scroll) * 0.05));
+    opacity: calc(1 - var(--hero-scroll) * 1.5);
+}
+
+#hero-aura-1 {
+    filter: blur(120px) brightness(calc(1 - var(--hero-scroll)));
+    transform: translate(calc(-50% + var(--mouse-x, 0px)), calc(-50% + var(--mouse-y, 0px))) translateY(calc(var(--hero-scroll) * -200px));
+}
+
+#hero-aura-2 {
+    filter: blur(100px) brightness(calc(1 - var(--hero-scroll)));
+    transform: translate(calc(-50% + var(--mouse-x, 0px)), calc(-50% + var(--mouse-y, 0px))) translateY(calc(var(--hero-scroll) * -350px));
+}
+
+#scroll-indicator {
+    opacity: calc(0.5 - var(--hero-scroll) * 4);
+}
+
 /* Smooth behavior */
 html {
     scroll-behavior: smooth;
