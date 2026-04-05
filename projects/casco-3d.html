@@ -23,7 +23,6 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="../assets/js/main.js" defer></script>
     <!-- 3D Model Viewer Component -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
     <style>
         model-viewer {
@@ -128,10 +127,18 @@
             <!-- Left Side: 3D Viewer Container -->
             <div
                 class="flex-grow min-h-[500px] lg:h-auto rounded-3xl overflow-hidden glass-edge relative bg-neutral-900/50 fade-up-element">
-                <model-viewer src="../assets/models/CASCO.glb" poster="../assets/renders/casco.png"
-                    alt="Casco Futurista 3D" shadow-intensity="2" camera-controls auto-rotate ar touch-action="pan-y">
+                <model-viewer src="../assets/models/CASCO.glb" 
+                    poster="../assets/renders/casco.png"
+                    alt="Casco Futurista 3D" 
+                    shadow-intensity="2" 
+                    camera-controls 
+                    auto-rotate 
+                    ar 
+                    loading="eager"
+                    reveal="auto"
+                    touch-action="pan-y">
 
-                    <div class="progress-bar slot=" poster">
+                    <div class="progress-bar" slot="poster">
                         <div class="update-bar"></div>
                     </div>
 

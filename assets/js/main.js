@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observerOptions = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.1
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, observerOptions);
+
+    // 3D Model Viewer Component
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';
+    document.head.appendChild(script);
 
     const fadeElements = document.querySelectorAll('.fade-up-element');
     fadeElements.forEach(el => observer.observe(el));
