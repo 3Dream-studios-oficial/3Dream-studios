@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Casco Futurista | 3D Interactive Showcase | 3Dream Studios</title>
+    <!-- SEO & Marketing Meta Tags -->
+    <meta name="description"
+        content="Experiencia interactiva 3D: Explora el Casco Futurista en tiempo real en el portafolio de 3Dream Studios." />
+    <meta name="keywords" content="3Dream Studios, Modelado 3D Interactivo, Casco Futurista, Model Viewer, WebGL, AR" />
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/logo.png" type="image/png" />
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Styles -->
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/main.js" defer></script>
+    <!-- 3D Model Viewer Component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <style>
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            --poster-color: transparent;
+        }
+
+        .progress-bar {
+            display: block;
+            width: 33%;
+            height: 4px;
+            max-height: 2%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            border-radius: 25px;
+            box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .update-bar {
+            background-color: #00E5FF;
+            width: 0%;
+            height: 100%;
+            border-radius: 25px;
+            float: left;
+            transition: width 0.3s;
+            box-shadow: 0 0 10px #00E5FF;
+        }
+
+        #ar-button {
+            background-image: url(https://modelviewer.dev/assets/ic_view_in_ar_new_googblue_48dp.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: 12px 50%;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            bottom: 16px;
+            padding: 0px 16px 0px 40px;
+            font-family: Roboto Regular, Helvetica Neue, sans-serif;
+            font-size: 14px;
+            color: #4285f4;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 18px;
+            border: 1px solid #DADCE0;
+        }
+
+        #ar-button:active {
+            background-color: #E8EAED;
+        }
+
+        #ar-button:focus {
+            outline: none;
+        }
+
+        #ar-button:focus-visible {
+            outline: 1px solid #4285f4;
+        }
+    </style>
+</head>
+
+<body
+    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <a href="../index.html" class="flex items-center gap-4 group">
+                <img src="../assets/img/logo.png" alt="3Dream Studios Logo"
+                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../gallery.html">Galería</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../universe.html">Universo</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../process.html">Proceso</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../archive.html">Archivo</a>
+            </div>
+            <a href="../cotizar.html"
+                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
+                Cotizar
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-16 flex flex-col">
+        <div class="container max-w-screen-2xl px-8 mx-auto flex-grow flex flex-col lg:flex-row gap-12">
+            <!-- Left Side: 3D Viewer Container -->
+            <div class="flex-grow min-h-[500px] lg:h-auto rounded-3xl overflow-hidden glass-edge relative bg-neutral-900/50 fade-up-element">
+                <model-viewer 
+                    src="../assets/models/CASCO.glb" 
+                    poster="../assets/renders/casco.png" 
+                    alt="Casco Futurista 3D" 
+                    shadow-intensity="2" 
+                    camera-controls 
+                    auto-rotate 
+                    ar 
+                    touch-action="pan-y">
+                    
+                    <div class="progress-bar slot="poster">
+                        <div class="update-bar"></div>
+                    </div>
+                    
+                    <button slot="ar-button" id="ar-button">
+                        Ver en tu espacio (AR)
+                    </button>
+                    
+                    <div id="ar-prompt">
+                        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                    </div>
+                </model-viewer>
+
+                <!-- UI Overlays for 3D Viewer -->
+                <div class="absolute bottom-8 left-8 flex gap-4">
+                     <span class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-[#00E5FF]">Real-Time Render</span>
+                     <span class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-secondary-container">Interactive 4K</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Info & Controls -->
+            <div class="lg:w-1/3 flex flex-col justify-center fade-up-element" style="transition-delay: 0.2s;">
+                <a href="../gallery.html" class="inline-flex items-center gap-2 text-neutral-400 hover:text-cyan-400 transition-colors mb-6 uppercase font-headline text-xs tracking-widest">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span> Regresar a Galería
+                </a>
+                
+                <h1 class="font-headline text-5xl font-black uppercase tracking-tighter text-white mb-6">
+                    CASCO <span class="text-cyan-400">FUTURISTA</span>
+                </h1>
+                
+                <div class="h-1 w-24 bg-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.8)] mb-8"></div>
+                
+                <p class="font-body italic text-gray-300 text-lg mb-8 leading-relaxed">
+                    Un concepto de vanguardia diseñado para la era de la exploración espacial y la interfaz neuronal. 
+                    Este modelo presenta materiales compuestos avanzados, óptica polarizada y una ergonomía optimizada para entornos hostiles.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                        <h3 class="font-headline font-bold text-cyan-300 uppercase text-sm tracking-widest mb-4 flex items-center gap-2">
+                           <span class="material-symbols-outlined text-sm">info</span> Especificaciones del Modelo
+                        </h3>
+                        <ul class="space-y-3 font-body text-sm text-gray-400">
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Formato:</span> <span class="text-white">GLB (web optimized)</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Texturizado:</span> <span class="text-white">PBR (Metallic/Roughness)</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Peso:</span> <span class="text-white">1.39 MB (Ultraligero)</span></li>
+                            <li class="flex justify-between"><span>Interactividad:</span> <span class="text-white">Full rotation & AR</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <button class="flex-grow bg-cyan-600 hover:bg-cyan-500 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl shadow-lg transition-all duration-300 active:scale-95" onclick="document.querySelector('model-viewer').activateAR()">
+                            Abrir en AR
+                        </button>
+                        <a href="../cotizar.html" class="flex-grow border border-white/20 hover:border-cyan-400 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl text-center transition-all">
+                            Personalizar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-10 pb-10">
+        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+            <span class="font-headline font-bold text-neutral-100 text-sm tracking-widest uppercase">3Dream Studios</span>
+            <p class="font-label text-[10px] tracking-widest uppercase text-neutral-500">
+                PROTOTIPO_CASCO_V0.8 // © 2026
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Update progress bar during loading
+        const modelViewer = document.querySelector('model-viewer');
+        const progressBar = document.querySelector('.progress-bar');
+        const updateBar = document.querySelector('.update-bar');
+
+        modelViewer.addEventListener('progress', (event) => {
+            const progress = event.detail.totalProgress * 100;
+            updateBar.style.width = `${progress}%`;
+            if (progress === 100) {
+                setTimeout(() => progressBar.classList.add('hide'), 300);
+            }
+        });
+    </script>
+</body>
+
+</html>
