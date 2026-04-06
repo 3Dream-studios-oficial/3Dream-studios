@@ -98,4 +98,34 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 5. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const desktopNav = document.querySelector('nav .hidden.md\\:flex');
+
+    if (mobileMenuBtn && mobileMenu && desktopNav) {
+        // Clone links from desktop nav into mobile nav
+        // We only clone the internal links (a tags) dynamically so we inherit relative paths automatically
+        const links = desktopNav.querySelectorAll('a');
+        links.forEach(link => {
+            const clone = link.cloneNode(true);
+            clone.classList.replace('text-sm', 'text-lg'); // Make them bigger for mobile tapping
+            mobileMenu.appendChild(clone);
+        });
+
+        // Toggle logic
+        mobileMenuBtn.addEventListener('click', () => {
+            const icon = mobileMenuBtn.querySelector('span');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                icon.textContent = 'close';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                icon.textContent = 'menu';
+            }
+        });
+    }
+
 });
