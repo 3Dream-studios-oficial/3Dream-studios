@@ -101,29 +101,39 @@ document.addEventListener("DOMContentLoaded", () => {
     // 5. Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinksContainer = document.getElementById('mobile-links-container');
     const desktopNav = document.querySelector('nav .hidden.md\\:flex');
 
-    if (mobileMenuBtn && mobileMenu && desktopNav) {
+    if (mobileMenuBtn && mobileMenu && desktopNav && mobileLinksContainer) {
         // Clone links from desktop nav into mobile nav
-        // We only clone the internal links (a tags) dynamically so we inherit relative paths automatically
         const links = desktopNav.querySelectorAll('a');
         links.forEach(link => {
             const clone = link.cloneNode(true);
-            clone.classList.replace('text-sm', 'text-lg'); // Make them bigger for mobile tapping
-            mobileMenu.appendChild(clone);
+            // Replace the small classes with huge, bold typography for mobile
+            clone.className = "text-neutral-400 hover:text-cyan-300 transition-all duration-300 font-headline font-black text-3xl uppercase tracking-[0.1em] hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)]";
+            mobileLinksContainer.appendChild(clone);
         });
 
-        // Toggle logic
+        // Toggle logic with animations
         mobileMenuBtn.addEventListener('click', () => {
             const icon = mobileMenuBtn.querySelector('span');
             if (mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.remove('hidden');
-                mobileMenu.classList.add('flex');
+                // A small timeout to allow display:block to apply before changing opacity for transition
+                setTimeout(() => {
+                    mobileMenu.classList.remove('opacity-0', 'translate-y-[-20px]');
+                    mobileMenu.classList.add('opacity-100', 'translate-y-0');
+                }, 10);
                 icon.textContent = 'close';
+                document.body.style.overflow = 'hidden'; // Prevent scrolling while menu is open
             } else {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
+                mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+                mobileMenu.classList.add('opacity-0', 'translate-y-[-20px]');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 500); // match duration-500
                 icon.textContent = 'menu';
+                document.body.style.overflow = '';
             }
         });
     }
