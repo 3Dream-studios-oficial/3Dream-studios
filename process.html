@@ -56,63 +56,102 @@
                 <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
                     href="archive.html">Archivo</a>
             </div>
-            <a href="cotizar.html"
-                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
-                Cotizar
+            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
+                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
             </a>
         </div>
     </nav>
-    <main
-        class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-xl px-8 mx-auto fade-up-element">
-        <!-- Background Auras -->
-        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"
-            data-speed="40"></div>
-        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none"
-            data-speed="-20"></div>
-        <h1
-            class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-16 text-center">
-            THE <span
-                class="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#448AFF] via-[#B34BFF] to-[#FF00E5] pb-2 md:pb-6">PROTOCOL</span>
-        </h1>
-        <div class="max-w-3xl mx-auto space-y-12 relative">
-            <div
-                class="absolute top-0 bottom-0 left-[27px] w-1 bg-gradient-to-b from-primary-container to-secondary-container hidden md:block opacity-50">
-            </div>
+    <main class="relative overflow-hidden pt-32 pb-32 min-h-screen max-w-screen-2xl px-8 mx-auto text-on-surface">
+        <!-- Background Ambient Lighting -->
+        <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+            <div class="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-primary-container/10 blur-[150px] rounded-full mix-blend-screen animate-pulse"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-secondary-container/10 blur-[150px] rounded-full mix-blend-screen" style="animation: spin 40s linear infinite reverse;"></div>
+        </div>
 
-            <div class="relative flex flex-col md:flex-row gap-8 items-start fade-up-element">
-                <div
-                    class="w-14 h-14 rounded-full bg-surface-container-high border-2 border-primary-container flex items-center justify-center shrink-0 z-10 font-headline font-bold text-primary-container text-xl shadow-[0_0_20px_rgba(0,242,255,0.5)]">
-                    01</div>
-                <div>
-                    <h2 class="font-headline text-3xl font-bold uppercase text-on-surface mb-2">Discovery &
-                        Synchronization</h2>
-                    <p class="font-body text-on-surface-variant italic">Aligning our frequency with yours. We deep-dive
-                        into the goals, constraints, and wild visions.</p>
+        <div class="relative z-10 text-center mb-24 fade-up-element w-full max-w-7xl mx-auto flex flex-col items-center">
+            <span class="material-symbols-outlined text-6xl md:text-8xl text-primary-container mb-6 block animate-bounce-y drop-shadow-[0_0_20px_rgba(0,242,255,0.3)]">psychology</span>
+            <h1 class="font-headline text-6xl md:text-[8rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] mb-4 leading-none">
+                THE 
+                <span class="block text-cyan-400 drop-shadow-[0_0_30px_rgba(0,242,255,0.8)] mt-[-10px] md:mt-[-20px]">PROTOCOL</span>
+            </h1>
+            <p class="font-body italic text-on-surface-variant text-xl md:text-2xl max-w-3xl border-t border-b border-white/5 py-6 mt-8">
+                Una pasión creativa incomparable, lista para estructurar resultados asombrosos a tu completa disposición.
+            </p>
+        </div>
+
+        <!-- Interactive Pipeline -->
+        <div class="relative max-w-6xl mx-auto py-10 mt-20">
+            <!-- Central Beam (Visible mainly on desktop) -->
+            <div class="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-primary-container via-[#B34BFF] to-secondary-container md:-translate-x-1/2 shadow-[0_0_20px_rgba(0,242,255,0.5)] rounded-full opacity-60"></div>
+            
+            <div class="space-y-24 md:space-y-40">
+                
+                <!-- Stage 1 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group fade-up-element w-full">
+                    <!-- Glowing Node -->
+                    <div class="absolute left-[22px] md:left-1/2 w-6 h-6 md:-translate-x-1/2 rounded-full border-4 border-neutral-900 bg-primary-container shadow-[0_0_20px_rgba(0,242,255,0.8)] z-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="hidden md:block md:w-5/12 relative z-10 w-full text-right pr-12">
+                        <span class="text-8xl font-black text-white/5 select-none group-hover:text-primary-container/20 transition-colors duration-500">01</span>
+                    </div>
+
+                    <div class="md:w-5/12 ml-16 md:ml-0 relative z-10 w-full transition-transform duration-700 ease-out group-hover:md:-translate-x-4">
+                        <span class="md:hidden text-6xl font-black text-white/5 select-none absolute -left-4 -top-8">01</span>
+                        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-2xl hover:border-primary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] hover:bg-neutral-900/80 transition-all duration-500 overflow-hidden relative">
+                            <div class="w-3 h-full bg-primary-container absolute left-0 top-0 shadow-[0_0_15px_rgba(0,242,255,0.8)]"></div>
+                            <h2 class="font-headline text-3xl md:text-5xl font-black uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] mb-4 pl-4 tracking-tighter">Sincronía Creativa</h2>
+                            <p class="font-body text-gray-400 text-lg leading-relaxed pl-4 font-light">
+                                Alineando nuestra frecuencia con la tuya. Analizamos en profundidad tus objetivos estéticos, requerimientos técnicos y las ideas más arriesgadas para cimentar el concepto central.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group fade-up-element w-full">
+                    <!-- Glowing Node -->
+                    <div class="absolute left-[22px] md:left-1/2 w-6 h-6 md:-translate-x-1/2 rounded-full border-4 border-neutral-900 bg-[#B34BFF] shadow-[0_0_20px_rgba(179,75,255,0.8)] z-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="hidden md:block md:w-5/12 relative z-10 w-full text-left pl-12">
+                        <span class="text-8xl font-black text-white/5 select-none group-hover:text-[#B34BFF]/20 transition-colors duration-500">02</span>
+                    </div>
+
+                    <div class="md:w-5/12 ml-16 md:ml-0 relative z-10 w-full transition-transform duration-700 ease-out group-hover:md:translate-x-4">
+                        <span class="md:hidden text-6xl font-black text-white/5 select-none absolute -left-4 -top-8">02</span>
+                        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-2xl hover:border-[#B34BFF] hover:shadow-[0_0_30px_rgba(179,75,255,0.2)] hover:bg-neutral-900/80 transition-all duration-500 overflow-hidden relative">
+                            <div class="w-3 h-full bg-[#B34BFF] absolute right-0 md:left-0 top-0 shadow-[0_0_15px_rgba(179,75,255,0.8)]"></div>
+                            <h2 class="font-headline text-3xl md:text-5xl font-black uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] mb-4 md:pl-4 tracking-tighter">Arquitectura Espacial</h2>
+                            <p class="font-body text-gray-400 text-lg leading-relaxed md:pl-4 font-light">
+                                Modelado digital progresivo. Creamos mallas tridimensionales con rigor geométrico, diseñando todo desde la luz volumétrica base hasta la composición estructural del cuadro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between group fade-up-element w-full">
+                    <!-- Glowing Node -->
+                    <div class="absolute left-[22px] md:left-1/2 w-6 h-6 md:-translate-x-1/2 rounded-full border-4 border-neutral-900 bg-secondary-container shadow-[0_0_20px_rgba(0,242,255,0.8)] z-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="hidden md:block md:w-5/12 relative z-10 w-full text-right pr-12">
+                        <span class="text-8xl font-black text-white/5 select-none group-hover:text-secondary-container/20 transition-colors duration-500">03</span>
+                    </div>
+
+                    <div class="md:w-5/12 ml-16 md:ml-0 relative z-10 w-full transition-transform duration-700 ease-out group-hover:md:-translate-x-4">
+                        <span class="md:hidden text-6xl font-black text-white/5 select-none absolute -left-4 -top-8">03</span>
+                        <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-2xl hover:border-secondary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] hover:bg-neutral-900/80 transition-all duration-500 overflow-hidden relative">
+                            <div class="w-3 h-full bg-secondary-container absolute left-0 top-0 shadow-[0_0_15px_rgba(0,242,255,0.8)]"></div>
+                            <h2 class="font-headline text-3xl md:text-5xl font-black uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] mb-4 pl-4 tracking-tighter">Detalle & Materiales</h2>
+                            <p class="font-body text-gray-400 text-lg leading-relaxed pl-4 font-light">
+                                El toque final de autenticidad. Aplicamos texturas físicamente precisas y simulaciones dinámicas y atmosféricas que inyectan vida directamente a nuestros vacíos digitales.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="relative flex flex-col md:flex-row gap-8 items-start fade-up-element"
-                style="transition-delay:0.1s;">
-                <div
-                    class="w-14 h-14 rounded-full bg-surface-container-high border-2 border-secondary-container flex items-center justify-center shrink-0 z-10 font-headline font-bold text-secondary-container text-xl">
-                    02</div>
-                <div>
-                    <h2 class="font-headline text-3xl font-bold uppercase text-on-surface mb-2">Spatial Architecture
-                    </h2>
-                    <p class="font-body text-on-surface-variant italic">Blocking out the geometry. Creating wireframes
-                        that exist in 3D space, focusing on lighting and volume rather than flat composition.</p>
-                </div>
-            </div>
-            <div class="relative flex flex-col md:flex-row gap-8 items-start fade-up-element"
-                style="transition-delay:0.2s;">
-                <div
-                    class="w-14 h-14 rounded-full bg-surface-container-high border-2 border-tertiary-container flex items-center justify-center shrink-0 z-10 font-headline font-bold text-tertiary-container text-xl">
-                    03</div>
-                <div>
-                    <h2 class="font-headline text-3xl font-bold uppercase text-on-surface mb-2">Material Generation</h2>
-                    <p class="font-body text-on-surface-variant italic">Applying textures, bioluminescence, and
-                        atmospheric density (fog, grain, particle systems) to bring the void to life.</p>
-                </div>
-            </div>
+            
         </div>
     </main>
     <!-- Footer -->

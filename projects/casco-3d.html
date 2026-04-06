@@ -114,9 +114,10 @@
                 <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
                     href="../archive.html">Archivo</a>
             </div>
-            <a href="../cotizar.html"
-                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
-                Cotizar
+            <a href="../cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
+                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
             </a>
         </div>
     </nav>
@@ -176,9 +177,7 @@
                 <div class="h-1 w-24 bg-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.8)] mb-8"></div>
 
                 <p class="font-body italic text-gray-300 text-lg mb-8 leading-relaxed">
-                    Un concepto de vanguardia diseñado para la era de la exploración espacial y la interfaz neuronal.
-                    Este modelo presenta materiales compuestos avanzados, óptica polarizada y una ergonomía optimizada
-                    para entornos hostiles.
+                    Un concepto de casco donde el desgaste y los rayones cuentan su propia historia. Diseñado con acabados metálicos y detalles auténticos que lo alejan de lo genérico.
                 </p>
 
                 <div class="space-y-6">
@@ -215,6 +214,53 @@
         </div>
     </main>
 
+    <!-- Sub-Gallery Grid -->
+    <section class="max-w-screen-xl mx-auto px-8 py-24 border-t border-white/5">
+        <h2 class="font-headline text-3xl font-bold uppercase tracking-widest text-cyan-400 mb-12 flex items-center gap-4">
+            <span class="w-12 h-[1px] bg-cyan-400"></span> Detalles y Acabados
+        </h2>
+
+        <!-- Organic Masonry Layout -->
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative">
+                <img src="../assets/renders/casco.png" alt="Render de Casco" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.2s">
+                <img src="../assets/renders/casco02.png" alt="Render de Casco" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.3s">
+                <img src="../assets/renders/casco03.png" alt="Render de Casco" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.4s">
+                <img src="../assets/renders/casco04.png" alt="Render de Casco" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+        </div>
+    </section>
+    <!-- Cinematic Video Section (Deferred Load) -->
+    <section id="cinematic-section" class="py-16 fade-up-element relative">
+        <div class="container max-w-screen-2xl px-8 mx-auto">
+            <div class="mb-10 text-center">
+                <span class="font-label text-cyan-500 text-xs tracking-widest uppercase mb-2 block">CGI & Fotorealismo</span>
+                <h2 class="font-headline text-4xl font-bold uppercase tracking-tighter text-on-surface">VISTA CINEMÁTICA</h2>
+                <div class="h-1 w-16 bg-cyan-500 shadow-[0_0_15px_rgba(0,242,255,0.8)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden glass-edge border border-outline-variant/30 relative aspect-video shadow-[0_0_40px_rgba(0,242,255,0.15)] group">
+                <!-- Video skeleton/placeholder while loading -->
+                <div id="video-placeholder" class="absolute inset-0 bg-surface-container-high flex flex-col items-center justify-center transition-opacity duration-700">
+                    <span class="material-symbols-outlined text-4xl text-outline-variant animate-pulse mb-4">movie</span>
+                    <span class="font-headline text-xs uppercase tracking-widest text-outline-variant">Inicializando Cinemática...</span>
+                </div>
+                
+                <!-- The video tag starts with no SRC. It's injected via JS only when visible. -->
+                <video id="cinematic-video" class="w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                    muted loop playsinline preload="none" 
+                    data-src="../assets/videos/casco.mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-neutral-950 w-full border-t border-white/5 pt-10 pb-10">
         <div
@@ -238,6 +284,43 @@
             updateBar.style.width = `${progress}%`;
             if (progress === 100) {
                 setTimeout(() => progressBar.classList.add('hide'), 300);
+            }
+        });
+
+        // Deferred Video Loading (Intersection Observer)
+        // Ensure the video doesn't compete with the 3D model during initial page load.
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("cinematic-video");
+            const placeholder = document.getElementById("video-placeholder");
+            
+            if ("IntersectionObserver" in window) {
+                const videoObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Inject source, load, and play
+                            const src = video.getAttribute("data-src");
+                            if (src) {
+                                video.src = src;
+                                video.load();
+                                video.play().then(() => {
+                                    video.classList.remove("opacity-0");
+                                    placeholder.classList.add("opacity-0");
+                                }).catch(e => console.log("Video autoplay blocked/failed:", e));
+                                
+                                video.removeAttribute("data-src");
+                                observer.unobserve(video); // Stop observing once loaded
+                            }
+                        }
+                    });
+                }, { rootMargin: "0px 0px 50% 0px" }); // Start loading when it's slightly below the viewport
+                
+                videoObserver.observe(video);
+            } else {
+                // Fallback for very old browsers
+                video.src = video.getAttribute("data-src");
+                video.play();
+                video.classList.remove("opacity-0");
+                placeholder.classList.add("opacity-0");
             }
         });
     </script>

@@ -53,59 +53,81 @@
                 <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
                     href="archive.html">Archivo</a>
             </div>
-            <a href="cotizar.html"
-                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
-                Cotizar
+            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
+                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
             </a>
         </div>
     </nav>
-    <main
-        class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-xl px-8 mx-auto fade-up-element text-center">
-        <!-- Background Auras -->
-        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"
-            data-speed="40"></div>
-        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none"
-            data-speed="-20"></div>
-        <h1
-            class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-8 fade-up-element">
-            THE <span n
-                class="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#448AFF] via-[#B34BFF] to-[#FF00E5] pb-2 md:pb-6">ARCHIVE</span>
-        </h1>
-        <p class="font-body italic text-on-surface-variant text-xl mb-16 max-w-2xl mx-auto">Recolección de las ideas
-            abstractas: arte bruto, iluminaciones experimentales, y entornos liminales del estudio.</p>
+    <main class="relative overflow-hidden pt-32 pb-32 min-h-screen max-w-screen-2xl px-8 mx-auto text-on-surface">
+        <!-- Background Ambient Lighting -->
+        <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 bg-neutral-950">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100px_100px] opacity-40"></div>
+            <div class="absolute top-[20%] left-[50%] w-[800px] h-[800px] bg-red-900/10 blur-[200px] rounded-full mix-blend-screen animate-pulse -translate-x-1/2"></div>
+        </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div onclick="alert('Acceso Restringido: El archivo Render_001.exr requiere permisos de nivel 3.')"
-                class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
-                <span
-                    class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">lock</span>
-                <span
-                    class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">Render_001.exr</span>
-                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative z-10 text-center mb-20 fade-up-element w-full max-w-7xl mx-auto flex flex-col items-center">
+            <div class="w-20 h-20 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(239,68,68,0.2)]">
+                <span class="material-symbols-outlined text-4xl text-red-500">lock_person</span>
             </div>
-            <div onclick="alert('Archivos encriptados. Ingrese clave maestra para ver ShaderCode_v3.')"
-                class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
-                <span
-                    class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">lock</span>
-                <span
-                    class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">ShaderCode_v3</span>
-                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <h1 class="font-headline text-5xl md:text-[8rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] mb-4 leading-none">
+                THE 
+                <span class="block text-red-500 drop-shadow-[0_0_30px_rgba(239,68,68,0.8)] mt-[-10px] md:mt-[-20px] relative z-20">ARCHIVE</span>
+            </h1>
+            <p class="font-body italic text-red-300 text-lg md:text-xl max-w-3xl border-l border-r border-red-500/20 px-8 py-4 mt-4 bg-red-950/20 backdrop-blur-md rounded-lg mx-8 relative overflow-hidden">
+                <span class="absolute inset-0 bg-red-500/5 animate-pulse"></span>
+                <strong>ACCESO RESTRINGIDO.</strong> Nivel de autorización requerido para visualizar experimentación cruda, shaders en progreso y arte bruto conceptual.
+            </p>
+        </div>
+
+        <!-- The Vault Grid -->
+        <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-16 px-4">
+            
+            <!-- Vault Card 1 -->
+            <div class="aspect-square bg-neutral-900/90 backdrop-blur-md rounded-2xl border border-neutral-800 flex flex-col items-center justify-center hover:border-red-500 hover:bg-neutral-900 transition-all duration-300 group cursor-pointer relative overflow-hidden transform hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(239,68,68,0.3)]">
+                <span class="material-symbols-outlined text-neutral-600 mb-4 group-hover:text-red-500 transition-colors text-5xl group-hover:scale-110 duration-300">shield_locked</span>
+                <span class="font-headline font-bold text-sm text-neutral-500 group-hover:text-red-400 transition-colors tracking-widest uppercase">Render_001.exr</span>
+                
+                <!-- Hover Error Overlay -->
+                <div class="absolute inset-0 bg-red-950/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10">
+                    <span class="material-symbols-outlined text-red-500 text-6xl animate-bounce-y">gpp_bad</span>
+                    <span class="font-headline font-black text-white uppercase tracking-widest mt-2 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">Denegado</span>
+                </div>
             </div>
-            <div onclick="alert('Acceso Restringido: Parámetros de iluminación clasificados.')"
-                class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
-                <span
-                    class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">lock</span>
-                <span
-                    class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">LightBake_Test</span>
-                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+            <!-- Vault Card 2 -->
+            <div class="aspect-square bg-neutral-900/90 backdrop-blur-md rounded-2xl border border-neutral-800 flex flex-col items-center justify-center hover:border-red-500 hover:bg-neutral-900 transition-all duration-300 group cursor-pointer relative overflow-hidden transform hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(239,68,68,0.3)]" style="transition-delay: 0.1s;">
+                <span class="material-symbols-outlined text-neutral-600 mb-4 group-hover:text-red-500 transition-colors text-5xl group-hover:scale-110 duration-300">code</span>
+                <span class="font-headline font-bold text-sm text-neutral-500 group-hover:text-red-400 transition-colors tracking-widest uppercase">ShaderCode_v3</span>
+                
+                <!-- Hover Error Overlay -->
+                <div class="absolute inset-0 bg-red-950/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10">
+                    <span class="material-symbols-outlined text-red-500 text-6xl animate-pulse">enhanced_encryption</span>
+                    <span class="font-headline font-black text-white uppercase tracking-widest mt-2 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">Encriptado</span>
+                </div>
             </div>
-            <div onclick="alert('Advertencia: El archivo GeoNode_Mess.blend se encuentra corrupto o en mantenimiento.')"
-                class="aspect-square bg-surface-container-highest rounded-xl border border-outline-variant/20 flex flex-col items-center justify-center hover:bg-surface-variant hover:border-red-500/50 transition-all group cursor-pointer relative overflow-hidden">
-                <span
-                    class="material-symbols-outlined text-outline-variant/30 mb-2 group-hover:text-red-500/80 transition-colors text-4xl">warning</span>
-                <span
-                    class="font-label text-xs text-outline-variant/70 group-hover:text-red-500 transition-colors">GeoNode_Mess</span>
-                <div class="absolute inset-0 bg-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+            <!-- Vault Card 3 -->
+            <div class="aspect-square bg-neutral-900/90 backdrop-blur-md rounded-2xl border border-neutral-800 flex flex-col items-center justify-center hover:border-red-500 hover:bg-neutral-900 transition-all duration-300 group cursor-pointer relative overflow-hidden transform hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(239,68,68,0.3)]" style="transition-delay: 0.2s;">
+                <span class="material-symbols-outlined text-neutral-600 mb-4 group-hover:text-red-500 transition-colors text-5xl group-hover:scale-110 duration-300">lightbulb</span>
+                <span class="font-headline font-bold text-sm text-neutral-500 group-hover:text-red-400 transition-colors tracking-widest uppercase">LightBake_Test</span>
+                
+                <div class="absolute inset-0 bg-red-950/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10">
+                    <span class="material-symbols-outlined text-red-500 text-6xl animate-bounce-y">pan_tool</span>
+                    <span class="font-headline font-black text-white uppercase tracking-widest mt-2 drop-shadow-[0_0_10px_rgba(239,68,68,0.8)]">Nivel 4 Req.</span>
+                </div>
+            </div>
+
+            <!-- Vault Card 4 -->
+            <div class="aspect-square bg-neutral-900/90 backdrop-blur-md rounded-2xl border border-neutral-800 flex flex-col items-center justify-center hover:border-orange-500 hover:bg-neutral-900 transition-all duration-300 group cursor-pointer relative overflow-hidden transform hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.3)]" style="transition-delay: 0.3s;">
+                <span class="material-symbols-outlined text-neutral-600 mb-4 group-hover:text-orange-500 transition-colors text-5xl group-hover:scale-110 duration-300">warning</span>
+                <span class="font-headline font-bold text-sm text-neutral-500 group-hover:text-orange-400 transition-colors tracking-widest uppercase">GeoNode_Mess</span>
+                
+                <div class="absolute inset-0 bg-orange-950/90 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm z-10">
+                    <span class="material-symbols-outlined text-orange-500 text-6xl animate-pulse">bug_report</span>
+                    <span class="font-headline font-black text-white uppercase tracking-widest mt-2 drop-shadow-[0_0_10px_rgba(249,115,22,0.8)]">Corrupto</span>
+                </div>
             </div>
         </div>
     </main>

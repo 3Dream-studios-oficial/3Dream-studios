@@ -57,127 +57,144 @@
                 <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
                     href="archive.html">Archivo</a>
             </div>
-            <a href="cotizar.html"
-                class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
-                Cotizar
+            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
+                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
             </a>
         </div>
     </nav>
 
     <!-- Content -->
-    <main class="relative overflow-hidden min-h-screen flex items-center justify-center pt-24 pb-12">
+    <main class="relative overflow-hidden min-h-screen flex items-center justify-center pt-32 pb-20 px-4 md:px-8">
         <!-- Background Auras -->
-        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"
-            data-speed="40"></div>
-        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none"
-            data-speed="-20"></div>
-        <div class="w-full max-w-3xl px-8 fade-up-element">
-            <div
-                class="bg-surface-container-high p-12 rounded-2xl border border-outline-variant/30 glass-edge relative overflow-hidden shadow-2xl">
-                <!-- Terminal decorative line -->
-                <div
-                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-container to-secondary-container">
+        <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] opacity-50"></div>
+            <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-container/10 blur-[150px] rounded-full mix-blend-screen animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary-container/10 blur-[150px] rounded-full mix-blend-screen" style="animation: spin 30s linear infinite reverse;"></div>
+        </div>
+
+        <div class="w-full max-w-4xl relative z-10 fade-up-element">
+            <div class="mb-12 text-center">
+                <span class="material-symbols-outlined text-5xl md:text-7xl text-white mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] animate-bounce-y">connect_without_contact</span>
+                <h1 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] mb-4 leading-none">
+                    INICIA LA <br>
+                    <span class="text-cyan-400 drop-shadow-[0_0_25px_rgba(0,242,255,0.8)] mix-blend-screen">CONEXIÓN</span>
+                </h1>
+                <p class="font-body italic text-neutral-400 text-lg md:text-xl font-light">
+                    Sincroniza tu visión con nuestra pasión. Todo entorno memorable comienza con tu mensaje.
+                </p>
+            </div>
+
+            <!-- Formulaire -->
+            <form id="connectForm" class="space-y-10 relative">
+                <!-- Marco Lateral -->
+                <div class="absolute left-[-20px] top-4 bottom-4 w-1 bg-gradient-to-b from-primary-container via-purple-500 to-transparent opacity-50 hidden md:block"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 pl-0 md:pl-8">
+                    <!-- Field 1 -->
+                    <div class="relative group">
+                        <span class="material-symbols-outlined absolute left-0 bottom-4 text-neutral-500 group-focus-within:text-cyan-400 transition-colors">person</span>
+                        <input id="wa-name" type="text" required 
+                            class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-cyan-400 transition-colors placeholder:text-neutral-700" 
+                            placeholder="TU NOMBRE" />
+                    </div>
+                    
+                    <!-- Field 2 -->
+                    <div class="relative group">
+                        <span class="material-symbols-outlined absolute left-0 bottom-4 text-neutral-500 group-focus-within:text-[#B34BFF] transition-colors">alternate_email</span>
+                        <input id="wa-email" type="email" required 
+                            class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-[#B34BFF] transition-colors placeholder:text-neutral-700" 
+                            placeholder="TU CORREO" />
+                    </div>
                 </div>
 
-                <div class="mb-10 text-center">
-                    <span class="material-symbols-outlined text-4xl text-primary-container mb-4">terminal</span>
-                    <h1
-                        class="font-headline text-4xl md:text-5xl uppercase tracking-tighter text-primary drop-shadow-2xl font-black">
-                        COTIZAR <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">TU
-                            PROYECTO</span>
-                    </h1>
-                    <p class="font-label text-on-surface-variant text-sm mt-3 tracking-widest uppercase opacity-70">
-                        Ingresa los detalles para generar tu cotización...</p>
+                <div class="relative group pl-0 md:pl-8">
+                    <span class="material-symbols-outlined absolute left-0 md:left-8 bottom-4 text-neutral-500 group-focus-within:text-cyan-400 transition-colors pointer-events-none">scatter_plot</span>
+                    <select id="wa-service" required 
+                        class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-cyan-400 transition-colors appearance-none cursor-pointer">
+                        <option value="" disabled selected class="bg-neutral-900 text-neutral-500">¿QUÉ EXPERIENCIA BUSCAS?</option>
+                        <option value="webgl" class="bg-neutral-900 text-white">Web En 3D - Espacios Inmersivos</option>
+                        <option value="product" class="bg-neutral-900 text-white">Renderizado Fotorealista</option>
+                        <option value="branding" class="bg-neutral-900 text-white">Branding Cinemático</option>
+                        <option value="other" class="bg-neutral-900 text-white">Otro Perfil de Trabajo</option>
+                    </select>
+                    <span class="material-symbols-outlined absolute right-0 bottom-4 text-neutral-500 pointer-events-none">expand_content</span>
                 </div>
 
-                <form id="connectForm" class="space-y-8">
-                    <div>
-                        <input id="wa-name" type="text" required class="cyber-input text-xl" placeholder="NOMBRE:" />
-                    </div>
-                    <div>
-                        <input id="wa-email" type="email" required class="cyber-input text-xl" placeholder="EMAIL:" />
-                    </div>
-                    <div>
-                        <select id="wa-service" class="cyber-input text-xl bg-transparent appearance-none" required>
-                            <option value="" disabled selected class="bg-surface text-neutral-500">SELECCION DE
-                                SERVICIO:</option>
-                            <option value="webgl" class="bg-surface">Web En 3D - Experiencias Inmersivas</option>
-                            <option value="product" class="bg-surface">Renderizado De Productos</option>
-                            <option value="branding" class="bg-surface">Branding Cinemático</option>
-                            <option value="other" class="bg-surface">Otro... (Debe ser relacionado)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <textarea id="wa-vision" required class="cyber-input text-xl min-h-[120px] resize-y"
-                            placeholder="EXPLICA LA IDEA DE TU PROYECTO..."></textarea>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                        <button type="button" id="btn-whatsapp"
-                            class="w-full flex justify-center items-center gap-3 bg-transparent border-2 border-primary-container text-primary-container px-6 py-4 font-headline text-base md:text-lg uppercase font-bold tracking-[0.1em] transition-all hover:bg-primary-container hover:text-on-primary hover:shadow-[0_0_20px_rgba(0,242,255,0.4)]">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-                            </svg>
-                            POR WHATSAPP
-                        </button>
-                        <button type="button" id="btn-email"
-                            class="w-full flex justify-center items-center gap-3 bg-transparent border-2 border-secondary-container text-secondary-container px-6 py-4 font-headline text-base md:text-lg uppercase font-bold tracking-[0.1em] transition-all hover:bg-secondary-container hover:text-on-secondary-container hover:shadow-[0_0_20px_rgba(179,75,255,0.4)]">
-                            <span class="material-symbols-outlined">mail</span>
-                            POR EMAIL
-                        </button>
-                    </div>
-                </form>
+                <div class="relative group pl-0 md:pl-8">
+                    <span class="material-symbols-outlined absolute left-0 md:left-8 top-2 text-neutral-500 group-focus-within:text-white transition-colors">description</span>
+                    <textarea id="wa-vision" required 
+                        class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 pt-2 min-h-[120px] focus:ring-0 focus:border-white transition-colors placeholder:text-neutral-700 resize-none overflow-hidden" 
+                        placeholder="DESCRIBE TU VISIÓN... (No te limites)"></textarea>
+                </div>
 
-                <script>
-                    function buildMessage() {
-                        const name = document.getElementById('wa-name').value;
-                        const email = document.getElementById('wa-email').value;
-                        const serviceNode = document.getElementById('wa-service');
-                        const service = serviceNode.options[serviceNode.selectedIndex].text;
-                        const vision = document.getElementById('wa-vision').value;
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 pl-0 md:pl-8">
+                    <!-- WhatsApp Button -->
+                    <button type="button" id="btn-whatsapp"
+                        class="relative overflow-hidden group flex justify-center items-center gap-4 bg-transparent border border-cyan-500/30 text-white px-6 py-5 rounded-2xl hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(0,242,255,0.4)] transition-all duration-300">
+                        <div class="absolute inset-0 bg-cyan-900/20 group-hover:bg-cyan-500/20 transition-colors"></div>
+                        <svg class="w-7 h-7 relative z-10 text-cyan-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                        </svg>
+                        <span class="font-headline font-bold text-lg tracking-widest relative z-10">WHATSAPP</span>
+                    </button>
 
-                        if (!name || !email || !vision || serviceNode.selectedIndex === 0) {
-                            alert("Por favor completa todos los campos del formulario antes de continuar.");
-                            return null;
-                        }
+                    <!-- Email Button -->
+                    <button type="button" id="btn-email"
+                        class="relative overflow-hidden group flex justify-center items-center gap-4 bg-transparent border border-[#B34BFF]/30 text-white px-6 py-5 rounded-2xl hover:border-[#B34BFF] hover:shadow-[0_0_30px_rgba(179,75,255,0.4)] transition-all duration-300">
+                        <div class="absolute inset-0 bg-purple-900/20 group-hover:bg-[#B34BFF]/20 transition-colors"></div>
+                        <span class="material-symbols-outlined text-[#B34BFF] text-3xl group-hover:scale-110 transition-transform relative z-10">mail</span>
+                        <span class="font-headline font-bold text-lg tracking-widest relative z-10">CORREO</span>
+                    </button>
+                </div>
+            </form>
 
-                        let message = `¡Hola 3Dream Studios! 🚀\n\n`;
-                        message += `Me gustaría cotizar un proyecto. Aquí están mis detalles:\n\n`;
-                        message += `*Nombre:* ${name}\n`;
-                        message += `*Email:* ${email}\n`;
-                        message += `*Servicio:* ${service}\n`;
-                        message += `*Visión:* ${vision}\n\n`;
-                        message += `¡Quedo a la espera de su respuesta!`;
-                        return message;
+            <script>
+                function buildMessage() {
+                    const name = document.getElementById('wa-name').value;
+                    const email = document.getElementById('wa-email').value;
+                    const serviceNode = document.getElementById('wa-service');
+                    const service = serviceNode.options[serviceNode.selectedIndex]?.text;
+                    const vision = document.getElementById('wa-vision').value;
+
+                    if (!name || !email || !vision || serviceNode.selectedIndex === 0 || !serviceNode.value) {
+                        alert("Sistema 3Dream: Requerimos todos los datos antes de iniciar conexión.");
+                        return null;
                     }
 
-                    document.getElementById('btn-whatsapp').addEventListener('click', function () {
-                        const message = buildMessage();
-                        if (message) {
-                            const phone = "527731357457";
-                            const encodedMessage = encodeURIComponent(message);
-                            const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
-                            window.open(whatsappUrl, '_blank');
-                        }
-                    });
+                    let message = `¡Hola 3Dream Studios! 🚀\n\n`;
+                    message += `Iniciando conexión de proyecto:\n\n`;
+                    message += `*Entidad:* ${name}\n`;
+                    message += `*Contacto:* ${email}\n`;
+                    message += `*Servicio Requerido:* ${service}\n`;
+                    message += `*Visión Central:* ${vision}\n\n`;
+                    message += `Quedo a la espera de la transmisión.`;
+                    return message;
+                }
 
-                    document.getElementById('btn-email').addEventListener('click', function () {
-                        const message = buildMessage();
-                        if (message) {
-                            // Cambiar asteriscos de markdown a texto plano o html si se usa body puro
-                            const plainMessage = message.replace(/\*/g, "");
-                            const emailAddress = "b.3dreamstudios@gmail.com";
-                            const subject = encodeURIComponent("Nueva Cotización de Proyecto - " + document.getElementById('wa-name').value);
-                            const body = encodeURIComponent(plainMessage);
-                            const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
-                            window.location.href = mailtoUrl;
-                        }
-                    });
-                </script>
+                document.getElementById('btn-whatsapp').addEventListener('click', function () {
+                    const message = buildMessage();
+                    if (message) {
+                        const phone = "527731357457";
+                        const encodedMessage = encodeURIComponent(message);
+                        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+                        window.open(whatsappUrl, '_blank');
+                    }
+                });
 
-            </div>
+                document.getElementById('btn-email').addEventListener('click', function () {
+                    const message = buildMessage();
+                    if (message) {
+                        const plainMessage = message.replace(/\*/g, "");
+                        const emailAddress = "b.3dreamstudios@gmail.com";
+                        const subject = encodeURIComponent("Nueva Conexión de Proyecto - " + document.getElementById('wa-name').value);
+                        const body = encodeURIComponent(plainMessage);
+                        const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+                        window.location.href = mailtoUrl;
+                    }
+                });
+            </script>
         </div>
     </main>
     <!-- Footer -->

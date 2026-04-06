@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reloj de Lujo | 3D Interactive Showcase | 3Dream Studios</title>
+    <!-- SEO & Marketing Meta Tags -->
+    <meta name="description"
+        content="Experiencia interactiva 3D: Explora el Reloj de Lujo en tiempo real en el portafolio de 3Dream Studios." />
+    <meta name="keywords" content="3Dream Studios, Modelado 3D Interactivo, Reloj de Lujo, Model Viewer, WebGL, AR" />
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/logo.png" type="image/png" />
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <!-- Styles -->
+    <link href="../assets/css/styles.css" rel="stylesheet" />
+    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="../assets/js/main.js" defer></script>
+    <!-- 3D Model Viewer Component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <style>
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            --poster-color: transparent;
+        }
+
+        .progress-bar {
+            display: block;
+            width: 33%;
+            height: 4px;
+            max-height: 2%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            border-radius: 25px;
+            box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .update-bar {
+            background-color: #B34BFF;
+            width: 0%;
+            height: 100%;
+            border-radius: 25px;
+            float: left;
+            transition: width 0.3s;
+            box-shadow: 0 0 10px #B34BFF;
+        }
+
+        #ar-button {
+            background-image: url(https://modelviewer.dev/assets/ic_view_in_ar_new_googblue_48dp.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: 12px 50%;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            bottom: 16px;
+            padding: 0px 16px 0px 40px;
+            font-family: Roboto Regular, Helvetica Neue, sans-serif;
+            font-size: 14px;
+            color: #4285f4;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 18px;
+            border: 1px solid #DADCE0;
+        }
+
+        #ar-button:active {
+            background-color: #E8EAED;
+        }
+
+        #ar-button:focus {
+            outline: none;
+        }
+
+        #ar-button:focus-visible {
+            outline: 1px solid #4285f4;
+        }
+    </style>
+</head>
+
+<body
+    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <a href="../index.html" class="flex items-center gap-4 group">
+                <img src="../assets/img/logo.png" alt="3Dream Studios Logo"
+                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
+            </a>
+            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../gallery.html">Galería</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../universe.html">Universo</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../process.html">Proceso</a>
+                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
+                    href="../archive.html">Archivo</a>
+            </div>
+            <a href="../cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
+                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-16 flex flex-col">
+        <div class="container max-w-screen-2xl px-8 mx-auto flex-grow flex flex-col lg:flex-row gap-12">
+            <!-- Left Side: 3D Viewer Container -->
+            <div
+                class="flex-grow min-h-[500px] lg:h-auto rounded-3xl overflow-hidden glass-edge relative bg-neutral-900/50 fade-up-element">
+                <model-viewer src="../assets/models/relog.glb" 
+                    poster="../assets/renders/reloj.png"
+                    alt="Reloj de Lujo 3D" 
+                    shadow-intensity="2" 
+                    camera-controls 
+                    auto-rotate 
+                    ar 
+                    loading="lazy"
+                    reveal="auto"
+                    touch-action="pan-y">
+
+                    <div class="progress-bar" slot="poster">
+                        <div class="update-bar"></div>
+                    </div>
+
+                    <button slot="ar-button" id="ar-button">
+                        Ver en tu espacio (AR)
+                    </button>
+
+                    <div id="ar-prompt">
+                        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                    </div>
+                </model-viewer>
+
+                <!-- UI Overlays for 3D Viewer -->
+                <div class="absolute bottom-8 left-8 flex gap-4">
+                    <span
+                        class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-[#B34BFF]">Real-Time
+                        Render</span>
+                    <span
+                        class="bg-neutral-950/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-xs font-headline uppercase tracking-widest text-secondary-container">Interactive
+                        Craft</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Info & Controls -->
+            <div class="lg:w-1/3 flex flex-col justify-center fade-up-element" style="transition-delay: 0.2s;">
+                <a href="../gallery.html"
+                    class="inline-flex items-center gap-2 text-neutral-400 hover:text-cyan-400 transition-colors mb-6 uppercase font-headline text-xs tracking-widest">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span> Regresar a Galería
+                </a>
+
+                <h1 class="font-headline text-5xl font-black uppercase tracking-tighter text-white mb-6">
+                    RELOJ <span class="text-secondary-container">DE LUJO</span>
+                </h1>
+
+                <div class="h-1 w-24 bg-secondary-container shadow-[0_0_15px_rgba(179,75,255,0.8)] mb-8"></div>
+
+                <p class="font-body italic text-gray-300 text-lg mb-8 leading-relaxed">
+                    Exploración visual enfocada en la elegancia. El nivel de detalle en cada pieza metálica refleja nuestra dedicación por crear modelos auténticos y de altísima calidad.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                        <h3
+                            class="font-headline font-bold text-secondary-container uppercase text-sm tracking-widest mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">info</span> Especificaciones del Modelo
+                        </h3>
+                        <ul class="space-y-3 font-body text-sm text-gray-400">
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Formato:</span> <span
+                                    class="text-white">GLB (High Fidelity)</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Texturizado:</span>
+                                <span class="text-white">PBR (Reflektance Art)</span></li>
+                            <li class="flex justify-between border-b border-white/5 pb-2"><span>Peso:</span> <span
+                                    class="text-white">94 MB (Artesanía Digital)</span></li>
+                            <li class="flex justify-between"><span>Interactividad:</span> <span class="text-white">Full
+                                    rotation & AR</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <button
+                            class="flex-grow bg-secondary-container hover:bg-secondary-container/80 text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl shadow-lg transition-all duration-300 active:scale-95"
+                            onclick="document.querySelector('model-viewer').activateAR()">
+                            Abrir en AR
+                        </button>
+                        <a href="../cotizar.html"
+                            class="flex-grow border border-white/20 hover:border-secondary-container text-white font-headline font-bold uppercase tracking-widest py-4 rounded-xl text-center transition-all">
+                            Cotiza tu proyecto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sub-Gallery Grid -->
+    <section class="max-w-screen-xl mx-auto px-8 py-24 border-t border-white/5">
+        <h2 class="font-headline text-3xl font-bold uppercase tracking-widest text-secondary-container mb-12 flex items-center gap-4">
+            <span class="w-12 h-[1px] bg-secondary-container"></span> Detalles y Acabados
+        </h2>
+
+        <!-- Organic Masonry Layout -->
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative">
+                <img src="../assets/renders/reloj.png" alt="Render de Reloj" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.2s">
+                <img src="../assets/renders/reloj1.png" alt="Render de Reloj" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.3s">
+                <img src="../assets/renders/reloj3.png" alt="Render de Reloj" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.4s">
+                <img src="../assets/renders/reloj4.png" alt="Render de Reloj" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+            <div class="rounded-xl overflow-hidden glass-edge group fade-up-element break-inside-avoid w-full relative" style="transition-delay: 0.5s">
+                <img src="../assets/renders/reloj2.png" alt="Render de Reloj" class="w-full h-auto object-cover group-hover:scale-110 transition-duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinematic Video Section (Deferred Load) -->
+    <section id="cinematic-section" class="py-16 fade-up-element relative">
+        <div class="container max-w-screen-2xl px-8 mx-auto">
+            <div class="mb-10 text-center">
+                <span class="font-label text-secondary-container text-xs tracking-widest uppercase mb-2 block">CGI & Fotorealismo</span>
+                <h2 class="font-headline text-4xl font-bold uppercase tracking-tighter text-on-surface">VISTA CINEMÁTICA</h2>
+                <div class="h-1 w-16 bg-secondary-container shadow-[0_0_15px_rgba(179,75,255,0.8)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden glass-edge border border-outline-variant/30 relative aspect-video shadow-[0_0_40px_rgba(179,75,255,0.15)] group">
+                <!-- Video skeleton/placeholder while loading -->
+                <div id="video-placeholder" class="absolute inset-0 bg-surface-container-high flex flex-col items-center justify-center transition-opacity duration-700">
+                    <span class="material-symbols-outlined text-4xl text-outline-variant animate-pulse mb-4">movie</span>
+                    <span class="font-headline text-xs uppercase tracking-widest text-outline-variant">Inicializando Cinemática...</span>
+                </div>
+                
+                <!-- The video tag starts with no SRC. It's injected via JS only when visible. -->
+                <video id="cinematic-video" class="w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                    muted loop playsinline preload="none" 
+                    data-src="../assets/videos/relog.mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-10 pb-10">
+        <div
+            class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+            <span class="font-headline font-bold text-neutral-100 text-sm tracking-widest uppercase">3Dream
+                Studios</span>
+            <p class="font-label text-[10px] tracking-widest uppercase text-neutral-500">
+                PROTOTIPO_RELOJ_V1.2 // © 2026
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Update progress bar during loading
+        const modelViewer = document.querySelector('model-viewer');
+        const progressBar = document.querySelector('.progress-bar');
+        const updateBar = document.querySelector('.update-bar');
+
+        modelViewer.addEventListener('progress', (event) => {
+            const progress = event.detail.totalProgress * 100;
+            updateBar.style.width = `${progress}%`;
+            if (progress === 100) {
+                setTimeout(() => {
+                    progressBar.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Deferred Video Loading (Intersection Observer)
+        // Ensure the 32MB video doesn't compete with the 94MB 3D model during initial page load.
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("cinematic-video");
+            const placeholder = document.getElementById("video-placeholder");
+            
+            if ("IntersectionObserver" in window) {
+                const videoObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Inject source, load, and play
+                            const src = video.getAttribute("data-src");
+                            if (src) {
+                                video.src = src;
+                                video.load();
+                                video.play().then(() => {
+                                    video.classList.remove("opacity-0");
+                                    placeholder.classList.add("opacity-0");
+                                }).catch(e => console.log("Video autoplay blocked/failed:", e));
+                                
+                                video.removeAttribute("data-src");
+                                observer.unobserve(video); // Stop observing once loaded
+                            }
+                        }
+                    });
+                }, { rootMargin: "0px 0px 50% 0px" }); // Start loading when it's slightly below the viewport
+                
+                videoObserver.observe(video);
+            } else {
+                // Fallback for very old browsers
+                video.src = video.getAttribute("data-src");
+                video.play();
+                video.classList.remove("opacity-0");
+                placeholder.classList.add("opacity-0");
+            }
+        });
+    </script>
+</body>
+
+</html>

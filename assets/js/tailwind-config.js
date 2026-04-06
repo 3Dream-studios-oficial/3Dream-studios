@@ -58,6 +58,9 @@ window.tailwind = {
                     "label": ["Inter"]
                 },
                 borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                gridTemplateRows: {
+                    "5": "repeat(5, minmax(0, 1fr))",
+                }
             }
         }
     }
