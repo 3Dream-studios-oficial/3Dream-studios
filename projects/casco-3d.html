@@ -58,36 +58,43 @@
         }
 
         #ar-button {
-            background-image: url(https://modelviewer.dev/assets/ic_view_in_ar_new_googblue_48dp.png);
-            background-repeat: no-repeat;
-            background-size: 20px 20px;
-            background-position: 12px 50%;
-            background-color: #fff;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            white-space: nowrap;
-            bottom: 16px;
-            padding: 0px 16px 0px 40px;
-            font-family: Roboto Regular, Helvetica Neue, sans-serif;
-            font-size: 14px;
-            color: #4285f4;
-            height: 36px;
-            line-height: 36px;
-            border-radius: 18px;
-            border: 1px solid #DADCE0;
+            bottom: 32px;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 13px;
+            padding: 12px 30px;
+            border-radius: 9999px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            z-index: 50;
+        }
+
+        #ar-button:hover {
+            border-color: rgba(0, 229, 255, 0.8);
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+            background-color: rgba(10, 10, 10, 0.95);
         }
 
         #ar-button:active {
-            background-color: #E8EAED;
+            transform: translateX(-50%) scale(0.95);
         }
 
         #ar-button:focus {
             outline: none;
-        }
-
-        #ar-button:focus-visible {
-            outline: 1px solid #4285f4;
         }
     </style>
 </head>
@@ -146,7 +153,8 @@
                     </div>
 
                     <button slot="ar-button" id="ar-button">
-                        Ver en tu espacio (AR)
+                        <span class="material-symbols-outlined text-[18px] text-[#00E5FF]">view_in_ar</span>
+                        Ver en tu espacio
                     </button>
 
                     <div id="ar-prompt">
