@@ -159,22 +159,30 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 mt-auto">
+    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
         <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex flex-col items-center md:items-start gap-2">
                 <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
                     Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">© 2026 3DREAM STUDIOS. HECHO
-                    CON PASIÓN.</p>
+                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
+                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
+                </p>
             </div>
             <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 transition-all font-headline text-sm"
-                    href="../gallery.html">Galería</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 transition-all font-headline text-sm"
-                    href="../universe.html">Universo</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 transition-all font-headline text-sm"
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="../terms.html">Términos</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="../privacy.html">Privacidad</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
+                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
+                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
                     href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
             </div>
+            <button
+                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </button>
         </div>
     </footer>
 </body>
