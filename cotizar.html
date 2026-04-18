@@ -1,90 +1,50 @@
-�
 <!DOCTYPE html>
 <html class="dark" lang="es">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Cotizar | 3Dream Studios</title>
-    <!-- SEO & Marketing Meta Tags -->
-    <meta name="description"
-        content="Cotiza tu proyecto de Desarrollo VR/AR, Arte 3D, y Renderizado Fotorealista con 3Dream Studios. Convierte tu visión en una experiencia inmersiva." />
-    <meta name="keywords"
-        content="3Dream Studios, Cotizar Diseño 3D, Presupuesto Renderizado, Desarrollo VR AR, Proyectos 3D" />
+    <title>Cotizar Proyecto 3D | 3Dream Studios — Contacto Directo</title>
+    <meta name="description" content="Cotiza tu proyecto de Modelado 3D, Renderizado Fotorealista o Desarrollo VR/AR con 3Dream Studios. Respuesta en menos de 24 horas. WhatsApp y correo disponibles." />
+    <meta name="keywords" content="cotizar diseño 3D, presupuesto render, cotización modelado 3D, contacto estudio 3D México, precio desarrollo VR AR" />
     <meta name="author" content="3Dream Studios" />
-    <!-- Open Graph / Meta Social Media -->
-    <meta property="og:title" content="Cotizar tu Proyecto | 3Dream Studios" />
-    <meta property="og:description" content="Cuéntanos tu idea y te ayudaremos a hacerla realidad." />
-    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/img/logo.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://brandonurielcalixtog.github.io/Portafolio/cotizar.html" />
     <meta property="og:type" content="website" />
-    <!-- Favicon -->
+    <meta property="og:url" content="https://brandonurielcalixtog.github.io/Portafolio/cotizar.html" />
+    <meta property="og:title" content="Cotizar tu Proyecto | 3Dream Studios" />
+    <meta property="og:description" content="Cuéntanos tu idea y te ayudaremos a hacerla realidad. Respondemos en menos de 24h." />
+    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/img/logo.png" />
+    <meta property="og:locale" content="es_MX" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/img/logo.png" type="image/png" />
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://brandonurielcalixtog.github.io/Portafolio/"},{"@type":"ListItem","position":2,"name":"Cotizar"}]}
+    </script>
 </head>
-
-<body
-    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+<body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
     <div class="grain-overlay"></div>
+    <div id="nav-root"></div>
 
-    <!-- Navigation -->
-    <nav
-        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="3Dream Studios Logo"
-                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
-                <span
-                    class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
-                    3Dream Studios
-                </span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="gallery.html">Galería</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="universe.html">Universo</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="process.html">Proceso</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="archive.html">Archivo</a>
-            </div>
-            <div class="flex items-center">
-            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
-                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
-            </a>
-            <button id="mobile-menu-btn" class="md:hidden ml-4 p-2 text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center rounded-full bg-neutral-900 border border-white/10" aria-label="Toggle Menu">
-                <span class="material-symbols-outlined text-2xl pointer-events-none">menu</span>
-            </button>
-        </div>
-        </div>
-        
-                <div id="mobile-menu" class="hidden absolute top-full left-0 w-full h-[calc(100vh-1px)] bg-neutral-950 border-t border-white/10 flex-col items-center justify-center gap-10 z-50 overflow-hidden transition-all duration-500 opacity-0 translate-y-[-20px]">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 opacity-50"></div>
-            
-            <div id="mobile-links-container" class="flex flex-col items-center gap-8 w-full relative z-10"></div>
-            
-            <div class="mt-8 relative z-10">
-                <p class="font-headline font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500 tracking-[0.4em] text-xs opacity-70">
-                    BEYOND REALITY
-                </p>
-            </div>
-        </div>
-    </nav>
+    <main id="main-content" class="relative overflow-hidden min-h-screen flex items-center justify-center pt-32 pb-20 px-4 md:px-8">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="absolute top-28 left-8 z-20">
+            <ol class="flex items-center gap-2 font-label text-xs tracking-widest uppercase text-neutral-500">
+                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                <li><span class="text-neutral-600 mx-1">/</span></li>
+                <li class="text-cyan-400" aria-current="page">Cotizar</li>
+            </ol>
+        </nav>
 
-    <!-- Content -->
-    <main class="relative overflow-hidden min-h-screen flex items-center justify-center pt-32 pb-20 px-4 md:px-8">
         <!-- Background Auras -->
         <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px] opacity-50"></div>
@@ -102,63 +62,93 @@
                 <p class="font-body italic text-neutral-400 text-lg md:text-xl font-light">
                     Sincroniza tu visión con nuestra pasión. Todo entorno memorable comienza con tu mensaje.
                 </p>
+                <!-- Trust indicators -->
+                <div class="flex flex-wrap justify-center gap-6 mt-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+                        <span class="font-label text-xs text-neutral-500 uppercase tracking-widest">Respuesta &lt;24h</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+                        <span class="font-label text-xs text-neutral-500 uppercase tracking-widest">Sin compromiso</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-green-400 text-sm">check_circle</span>
+                        <span class="font-label text-xs text-neutral-500 uppercase tracking-widest">100% Confidencial</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Formulaire -->
-            <form id="connectForm" class="space-y-10 relative">
-                <!-- Marco Lateral -->
+            <!-- Form -->
+            <form id="connectForm" class="space-y-10 relative" novalidate>
+                <!-- Honeypot anti-spam -->
+                <input type="text" name="website" class="ohnohoney" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
                 <div class="absolute left-[-20px] top-4 bottom-4 w-1 bg-gradient-to-b from-primary-container via-purple-500 to-transparent opacity-50 hidden md:block"></div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 pl-0 md:pl-8">
-                    <!-- Field 1 -->
-                    <div class="relative group">
+                    <div class="relative group form-field-wrapper">
                         <span class="material-symbols-outlined absolute left-0 bottom-4 text-neutral-500 group-focus-within:text-cyan-400 transition-colors">person</span>
-                        <input id="wa-name" type="text" required 
+                        <input id="wa-name" type="text" required minlength="2" autocomplete="name"
                             class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-cyan-400 transition-colors placeholder:text-neutral-700" 
-                            placeholder="TU NOMBRE" />
+                            placeholder="TU NOMBRE" aria-label="Tu nombre completo" />
+                        <span class="material-symbols-outlined field-status">check_circle</span>
                     </div>
                     
-                    <!-- Field 2 -->
-                    <div class="relative group">
+                    <div class="relative group form-field-wrapper">
                         <span class="material-symbols-outlined absolute left-0 bottom-4 text-neutral-500 group-focus-within:text-[#B34BFF] transition-colors">alternate_email</span>
-                        <input id="wa-email" type="email" required 
+                        <input id="wa-email" type="email" required autocomplete="email"
                             class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-[#B34BFF] transition-colors placeholder:text-neutral-700" 
-                            placeholder="TU CORREO" />
+                            placeholder="TU CORREO" aria-label="Tu correo electrónico" />
+                        <span class="material-symbols-outlined field-status">check_circle</span>
                     </div>
                 </div>
 
-                <div class="relative group pl-0 md:pl-8">
+                <div class="relative group pl-0 md:pl-8 form-field-wrapper">
                     <span class="material-symbols-outlined absolute left-0 md:left-8 bottom-4 text-neutral-500 group-focus-within:text-cyan-400 transition-colors pointer-events-none">scatter_plot</span>
                     <select id="wa-service" required 
-                        class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-cyan-400 transition-colors appearance-none cursor-pointer">
+                        class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 focus:ring-0 focus:border-cyan-400 transition-colors appearance-none cursor-pointer"
+                        aria-label="Tipo de servicio requerido">
                         <option value="" disabled selected class="bg-neutral-900 text-neutral-500">¿QUÉ EXPERIENCIA BUSCAS?</option>
-                        <option value="webgl" class="bg-neutral-900 text-white">Web En 3D - Espacios Inmersivos</option>
-                        <option value="product" class="bg-neutral-900 text-white">Renderizado Fotorealista</option>
+                        <option value="modelado" class="bg-neutral-900 text-white">Modelado 3D Profesional</option>
+                        <option value="render" class="bg-neutral-900 text-white">Renderizado Fotorealista</option>
+                        <option value="vrar" class="bg-neutral-900 text-white">Desarrollo VR/AR</option>
                         <option value="branding" class="bg-neutral-900 text-white">Branding Cinemático</option>
-                        <option value="other" class="bg-neutral-900 text-white">Otro Perfil de Trabajo</option>
+                        <option value="webgl" class="bg-neutral-900 text-white">Web Inmersiva 3D</option>
+                        <option value="other" class="bg-neutral-900 text-white">Otro Tipo de Proyecto</option>
                     </select>
                     <span class="material-symbols-outlined absolute right-0 bottom-4 text-neutral-500 pointer-events-none">expand_content</span>
                 </div>
 
-                <div class="relative group pl-0 md:pl-8">
+                <div class="relative group pl-0 md:pl-8 form-field-wrapper">
                     <span class="material-symbols-outlined absolute left-0 md:left-8 top-2 text-neutral-500 group-focus-within:text-white transition-colors">description</span>
-                    <textarea id="wa-vision" required 
+                    <textarea id="wa-vision" required minlength="10"
                         class="w-full bg-transparent border-0 border-b-2 border-neutral-800 text-white text-xl md:text-2xl font-light pl-10 pb-3 pt-2 min-h-[120px] focus:ring-0 focus:border-white transition-colors placeholder:text-neutral-700 resize-none overflow-hidden" 
-                        placeholder="DESCRIBE TU VISIÓN... (No te limites)"></textarea>
+                        placeholder="DESCRIBE TU VISIÓN... (No te limites)" aria-label="Descripción de tu proyecto"></textarea>
+                </div>
+
+                <!-- Legal consent -->
+                <div class="pl-0 md:pl-8">
+                    <label class="flex items-start gap-3 cursor-pointer group">
+                        <input type="checkbox" id="consent-check" required
+                            class="mt-1 w-5 h-5 rounded border-neutral-600 bg-transparent text-cyan-400 focus:ring-cyan-400 focus:ring-offset-0 cursor-pointer" />
+                        <span class="font-body text-neutral-500 text-sm leading-relaxed group-hover:text-neutral-400 transition-colors">
+                            Acepto el <a href="privacy.html" class="text-cyan-400 hover:text-cyan-300 underline underline-offset-2" target="_blank">Aviso de Privacidad</a> 
+                            y autorizo el tratamiento de mis datos personales conforme a la LFPDPPP para recibir una cotización.
+                        </span>
+                    </label>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 pl-0 md:pl-8">
-                    <!-- WhatsApp Button -->
                     <button type="button" id="btn-whatsapp"
                         class="relative overflow-hidden group flex justify-center items-center gap-4 bg-transparent border border-cyan-500/30 text-white px-6 py-5 rounded-2xl hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(0,242,255,0.4)] transition-all duration-300">
                         <div class="absolute inset-0 bg-cyan-900/20 group-hover:bg-cyan-500/20 transition-colors"></div>
-                        <svg class="w-7 h-7 relative z-10 text-cyan-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+                        <svg class="w-7 h-7 relative z-10 text-cyan-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
                         </svg>
                         <span class="font-headline font-bold text-lg tracking-widest relative z-10">WHATSAPP</span>
                     </button>
 
-                    <!-- Email Button -->
                     <button type="button" id="btn-email"
                         class="relative overflow-hidden group flex justify-center items-center gap-4 bg-transparent border border-[#B34BFF]/30 text-white px-6 py-5 rounded-2xl hover:border-[#B34BFF] hover:shadow-[0_0_30px_rgba(179,75,255,0.4)] transition-all duration-300">
                         <div class="absolute inset-0 bg-purple-900/20 group-hover:bg-[#B34BFF]/20 transition-colors"></div>
@@ -169,79 +159,83 @@
             </form>
 
             <script>
-                function buildMessage() {
-                    const name = document.getElementById('wa-name').value;
-                    const email = document.getElementById('wa-email').value;
+                function validateForm() {
+                    const name = document.getElementById('wa-name').value.trim();
+                    const email = document.getElementById('wa-email').value.trim();
                     const serviceNode = document.getElementById('wa-service');
-                    const service = serviceNode.options[serviceNode.selectedIndex]?.text;
-                    const vision = document.getElementById('wa-vision').value;
+                    const vision = document.getElementById('wa-vision').value.trim();
+                    const consent = document.getElementById('consent-check').checked;
+                    const honeypot = document.querySelector('.ohnohoney')?.value;
 
-                    if (!name || !email || !vision || serviceNode.selectedIndex === 0 || !serviceNode.value) {
-                        alert("Sistema 3Dream: Requerimos todos los datos antes de iniciar conexión.");
+                    // Anti-spam check
+                    if (honeypot) return null;
+
+                    if (!name || name.length < 2) {
+                        alert("Por favor, ingresa tu nombre completo.");
+                        document.getElementById('wa-name').focus();
                         return null;
                     }
 
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email || !emailRegex.test(email)) {
+                        alert("Por favor, ingresa un correo electrónico válido.");
+                        document.getElementById('wa-email').focus();
+                        return null;
+                    }
+
+                    if (serviceNode.selectedIndex === 0 || !serviceNode.value) {
+                        alert("Por favor, selecciona el tipo de servicio que buscas.");
+                        serviceNode.focus();
+                        return null;
+                    }
+
+                    if (!vision || vision.length < 10) {
+                        alert("Por favor, describe tu proyecto con al menos 10 caracteres.");
+                        document.getElementById('wa-vision').focus();
+                        return null;
+                    }
+
+                    if (!consent) {
+                        alert("Para continuar, es necesario aceptar el Aviso de Privacidad.");
+                        document.getElementById('consent-check').focus();
+                        return null;
+                    }
+
+                    const service = serviceNode.options[serviceNode.selectedIndex]?.text;
+
                     let message = `¡Hola 3Dream Studios! 🚀\n\n`;
                     message += `Iniciando conexión de proyecto:\n\n`;
-                    message += `*Entidad:* ${name}\n`;
+                    message += `*Nombre:* ${name}\n`;
                     message += `*Contacto:* ${email}\n`;
-                    message += `*Servicio Requerido:* ${service}\n`;
-                    message += `*Visión Central:* ${vision}\n\n`;
-                    message += `Quedo a la espera de la transmisión.`;
-                    return message;
+                    message += `*Servicio:* ${service}\n`;
+                    message += `*Descripción:* ${vision}\n\n`;
+                    message += `Quedo a la espera de su respuesta.`;
+                    return { message, name, email };
                 }
 
                 document.getElementById('btn-whatsapp').addEventListener('click', function () {
-                    const message = buildMessage();
-                    if (message) {
+                    const result = validateForm();
+                    if (result) {
                         const phone = "527731357457";
-                        const encodedMessage = encodeURIComponent(message);
-                        const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
-                        window.open(whatsappUrl, '_blank');
+                        const encodedMessage = encodeURIComponent(result.message);
+                        window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
                     }
                 });
 
                 document.getElementById('btn-email').addEventListener('click', function () {
-                    const message = buildMessage();
-                    if (message) {
-                        const plainMessage = message.replace(/\*/g, "");
+                    const result = validateForm();
+                    if (result) {
+                        const plainMessage = result.message.replace(/\*/g, "");
                         const emailAddress = "b.3dreamstudios@gmail.com";
-                        const subject = encodeURIComponent("Nueva Conexión de Proyecto - " + document.getElementById('wa-name').value);
+                        const subject = encodeURIComponent("Nueva Cotización - " + result.name);
                         const body = encodeURIComponent(plainMessage);
-                        const mailtoUrl = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
-                        window.location.href = mailtoUrl;
+                        window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
                     }
                 });
             </script>
         </div>
     </main>
-    <!-- Footer -->
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
-                    Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
-                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
-                </p>
-            </div>
-            <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="terms.html">Términos</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="privacy.html">Privacidad</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
-            </div>
-            <button
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="material-symbols-outlined">arrow_upward</span>
-            </button>
-        </div>
-    </footer>
-</body>
 
+    <div id="footer-root"></div>
+</body>
 </html>

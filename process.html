@@ -1,87 +1,50 @@
-�
 <!DOCTYPE html>
 <html class="dark" lang="es">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Proceso | 3Dream Studios</title>
-    <!-- SEO & Marketing Meta Tags -->
-    <meta name="description"
-        content="Conoce nuestro protocolo de trabajo corporativo. Desde el descubrimiento hasta la arquitectura espacial y texturizado para mundos virtuales." />
-    <meta name="keywords"
-        content="3Dream Studios, Proceso de Diseño 3D, Flujo de Trabajo CGI, Metodología Desarrollo VR AR" />
+    <title>Nuestro Proceso Creativo | 3Dream Studios — Metodología de Trabajo</title>
+    <meta name="description" content="Descubre el proceso creativo de 3Dream Studios: desde la sincronía inicial hasta la arquitectura espacial y el texturizado final. Metodología profesional de diseño 3D." />
+    <meta name="keywords" content="proceso diseño 3D, metodología renderizado, flujo trabajo CGI, cómo se hace un render, etapas modelado 3D" />
     <meta name="author" content="3Dream Studios" />
-    <!-- Open Graph / Meta Social Media -->
-    <meta property="og:title" content="Nuestro Proceso | 3Dream Studios" />
-    <meta property="og:description"
-        content="Un escuadrón sincronizado para estructurar el ciber espacio a tu disposición." />
-    <meta property="og:image"
-        content="https://brandonurielcalixtog.github.io/Portafolio/assets/img/logo.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://brandonurielcalixtog.github.io/Portafolio/process.html" />
     <meta property="og:type" content="website" />
-    <!-- Favicon -->
+    <meta property="og:url" content="https://brandonurielcalixtog.github.io/Portafolio/process.html" />
+    <meta property="og:title" content="Nuestro Proceso | 3Dream Studios" />
+    <meta property="og:description" content="Un escuadrón sincronizado para estructurar el espacio digital a tu disposición." />
+    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/img/logo.png" />
+    <meta property="og:locale" content="es_MX" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/img/logo.png" type="image/png" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://brandonurielcalixtog.github.io/Portafolio/"},{"@type":"ListItem","position":2,"name":"Proceso"}]}
+    </script>
 </head>
+<body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+    <div class="grain-overlay"></div>
+    <div id="nav-root"></div>
 
-<body
-    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
-    <div class="grain-overlay"></div> <!-- Navigation -->
-    <nav
-        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="3Dream Studios Logo"
-                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
-                <span
-                    class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
-                    3Dream Studios
-                </span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="gallery.html">Galería</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="universe.html">Universo</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="process.html">Proceso</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="archive.html">Archivo</a>
-            </div>
-            <div class="flex items-center">
-            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
-                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
-            </a>
-            <button id="mobile-menu-btn" class="md:hidden ml-4 p-2 text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center rounded-full bg-neutral-900 border border-white/10" aria-label="Toggle Menu">
-                <span class="material-symbols-outlined text-2xl pointer-events-none">menu</span>
-            </button>
-        </div>
-        </div>
-        
-                <div id="mobile-menu" class="hidden absolute top-full left-0 w-full h-[calc(100vh-1px)] bg-neutral-950 border-t border-white/10 flex-col items-center justify-center gap-10 z-50 overflow-hidden transition-all duration-500 opacity-0 translate-y-[-20px]">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 opacity-50"></div>
-            
-            <div id="mobile-links-container" class="flex flex-col items-center gap-8 w-full relative z-10"></div>
-            
-            <div class="mt-8 relative z-10">
-                <p class="font-headline font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500 tracking-[0.4em] text-xs opacity-70">
-                    BEYOND REALITY
-                </p>
-            </div>
-        </div>
-    </nav>
-    <main class="relative overflow-hidden pt-32 pb-32 min-h-screen max-w-screen-2xl px-8 mx-auto text-on-surface">
+    <main id="main-content" class="relative overflow-hidden pt-32 pb-32 min-h-screen max-w-screen-2xl px-8 mx-auto text-on-surface">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-8 fade-up-element">
+            <ol class="flex items-center gap-2 font-label text-xs tracking-widest uppercase text-neutral-500">
+                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                <li><span class="text-neutral-600 mx-1">/</span></li>
+                <li class="text-cyan-400" aria-current="page">Proceso</li>
+            </ol>
+        </nav>
+
         <!-- Background Ambient Lighting -->
         <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
             <div class="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-primary-container/10 blur-[150px] rounded-full mix-blend-screen animate-pulse"></div>
@@ -101,20 +64,15 @@
 
         <!-- Interactive Pipeline -->
         <div class="relative max-w-6xl mx-auto py-10 mt-20">
-            <!-- Central Beam (Visible mainly on desktop) -->
             <div class="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-primary-container via-[#B34BFF] to-secondary-container md:-translate-x-1/2 shadow-[0_0_20px_rgba(0,242,255,0.5)] rounded-full opacity-60"></div>
             
             <div class="space-y-24 md:space-y-40">
-                
                 <!-- Stage 1 -->
                 <div class="relative flex flex-col md:flex-row items-center justify-between group fade-up-element w-full">
-                    <!-- Glowing Node -->
                     <div class="absolute left-[22px] md:left-1/2 w-6 h-6 md:-translate-x-1/2 rounded-full border-4 border-neutral-900 bg-primary-container shadow-[0_0_20px_rgba(0,242,255,0.8)] z-20 group-hover:scale-150 transition-transform duration-500"></div>
-                    
                     <div class="hidden md:block md:w-5/12 relative z-10 w-full text-right pr-12">
                         <span class="text-8xl font-black text-white/5 select-none group-hover:text-primary-container/20 transition-colors duration-500">01</span>
                     </div>
-
                     <div class="md:w-5/12 ml-16 md:ml-0 relative z-10 w-full transition-transform duration-700 ease-out group-hover:md:-translate-x-4">
                         <span class="md:hidden text-6xl font-black text-white/5 select-none absolute -left-4 -top-8">01</span>
                         <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-2xl hover:border-primary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] hover:bg-neutral-900/80 transition-all duration-500 overflow-hidden relative">
@@ -129,13 +87,10 @@
 
                 <!-- Stage 2 -->
                 <div class="relative flex flex-col md:flex-row-reverse items-center justify-between group fade-up-element w-full">
-                    <!-- Glowing Node -->
                     <div class="absolute left-[22px] md:left-1/2 w-6 h-6 md:-translate-x-1/2 rounded-full border-4 border-neutral-900 bg-[#B34BFF] shadow-[0_0_20px_rgba(179,75,255,0.8)] z-20 group-hover:scale-150 transition-transform duration-500"></div>
-                    
                     <div class="hidden md:block md:w-5/12 relative z-10 w-full text-left pl-12">
                         <span class="text-8xl font-black text-white/5 select-none group-hover:text-[#B34BFF]/20 transition-colors duration-500">02</span>
                     </div>
-
                     <div class="md:w-5/12 ml-16 md:ml-0 relative z-10 w-full transition-transform duration-700 ease-out group-hover:md:translate-x-4">
                         <span class="md:hidden text-6xl font-black text-white/5 select-none absolute -left-4 -top-8">02</span>
                         <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-2xl hover:border-[#B34BFF] hover:shadow-[0_0_30px_rgba(179,75,255,0.2)] hover:bg-neutral-900/80 transition-all duration-500 overflow-hidden relative">
@@ -150,18 +105,15 @@
 
                 <!-- Stage 3 -->
                 <div class="relative flex flex-col md:flex-row items-center justify-between group fade-up-element w-full">
-                    <!-- Glowing Node -->
                     <div class="absolute left-[22px] md:left-1/2 w-6 h-6 md:-translate-x-1/2 rounded-full border-4 border-neutral-900 bg-secondary-container shadow-[0_0_20px_rgba(0,242,255,0.8)] z-20 group-hover:scale-150 transition-transform duration-500"></div>
-                    
                     <div class="hidden md:block md:w-5/12 relative z-10 w-full text-right pr-12">
                         <span class="text-8xl font-black text-white/5 select-none group-hover:text-secondary-container/20 transition-colors duration-500">03</span>
                     </div>
-
                     <div class="md:w-5/12 ml-16 md:ml-0 relative z-10 w-full transition-transform duration-700 ease-out group-hover:md:-translate-x-4">
                         <span class="md:hidden text-6xl font-black text-white/5 select-none absolute -left-4 -top-8">03</span>
                         <div class="p-8 md:p-10 rounded-3xl border border-white/10 bg-neutral-900/60 backdrop-blur-xl shadow-2xl hover:border-secondary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] hover:bg-neutral-900/80 transition-all duration-500 overflow-hidden relative">
                             <div class="w-3 h-full bg-secondary-container absolute left-0 top-0 shadow-[0_0_15px_rgba(0,242,255,0.8)]"></div>
-                            <h2 class="font-headline text-3xl md:text-5xl font-black uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] mb-4 pl-4 tracking-tighter">Detalle & Materiales</h2>
+                            <h2 class="font-headline text-3xl md:text-5xl font-black uppercase text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] mb-4 pl-4 tracking-tighter">Detalle &amp; Materiales</h2>
                             <p class="font-body text-gray-400 text-lg leading-relaxed pl-4 font-light">
                                 El toque final de autenticidad. Aplicamos texturas físicamente precisas y simulaciones dinámicas y atmosféricas que inyectan vida directamente a nuestros vacíos digitales.
                             </p>
@@ -169,36 +121,9 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </main>
-    <!-- Footer -->
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
-                    Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
-                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
-                </p>
-            </div>
-            <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="terms.html">Términos</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="privacy.html">Privacidad</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
-            </div>
-            <button
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="material-symbols-outlined">arrow_upward</span>
-            </button>
-        </div>
-    </footer>
-</body>
 
+    <div id="footer-root"></div>
+</body>
 </html>

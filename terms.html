@@ -1,88 +1,127 @@
-�<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="es">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Términos y Condiciones | 3Dream Studios</title>
+    <title>Términos y Condiciones | 3Dream Studios — Acuerdo Legal</title>
+    <meta name="description" content="Términos y Condiciones de uso del sitio web y servicios de 3Dream Studios. Propiedad intelectual, cotizaciones, colaboraciones y derechos de autor." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://brandonurielcalixtog.github.io/Portafolio/terms.html" />
+    <meta property="og:title" content="Términos y Condiciones | 3Dream Studios" />
+    <meta property="og:locale" content="es_MX" />
+    <link rel="icon" href="assets/img/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="assets/css/styles.css" rel="stylesheet"/>
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 </head>
 <body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
-    <div class="grain-overlay"></div>    <!-- Navigation -->
-    <nav class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950 shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="3Dream Studios Logo"
-                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
-                <span class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
-                    3Dream Studios
-                </span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="gallery.html">Galería</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="universe.html">Universo</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="process.html">Proceso</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="archive.html">Archivo</a>
-            </div>
-            <a href="cotizar.html" class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
-                Cotizar
-            </a>
-        </div>
-    </nav>
-    <main class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-md px-8 mx-auto fade-up-element text-left">
-        <!-- Background Auras -->
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+    <div class="grain-overlay"></div>
+    <div id="nav-root"></div>
+
+    <main id="main-content" class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-md px-8 mx-auto fade-up-element text-left">
+        <nav aria-label="Breadcrumb" class="mb-8">
+            <ol class="flex items-center gap-2 font-label text-xs tracking-widest uppercase text-neutral-500">
+                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                <li><span class="text-neutral-600 mx-1">/</span></li>
+                <li class="text-cyan-400" aria-current="page">Términos</li>
+            </ol>
+        </nav>
+
         <div class="parallax-aura absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none" data-speed="40"></div>
+        
         <h1 class="font-headline text-4xl md:text-5xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-8 border-b border-primary-container/30 pb-6">
-            TERMINOS <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">Y CONDICIONES</span>
+            TÉRMINOS <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">Y CONDICIONES</span>
         </h1>
 
         <div class="prose prose-invert prose-p:text-on-surface-variant prose-headings:text-on-surface max-w-none font-body space-y-6">
             <p><strong>Última actualización:</strong> Abril 2026</p>
 
-            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">1. Bienvenido a nuestro espacio</h3>
-            <p>Nos alegra tenerte en el sitio web de <strong>3Dream Studios</strong>. Al navegar por nuestro portafolio y ponerte en contacto con nosotros, aceptas estos términos de convivencia y uso. Nuestro objetivo es establecer una relación de mutuo respeto y claridad creativa.</p>
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">1. Aceptación de los términos</h3>
+            <p>Al acceder y utilizar el sitio web de <strong>3Dream Studios</strong> (en adelante "el Sitio"), así como al solicitar cualquiera de nuestros servicios, aceptas quedar vinculado por estos Términos y Condiciones. Si no estás de acuerdo con alguno de estos términos, te pedimos que no utilices nuestro Sitio ni nuestros servicios.</p>
 
-            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">2. Nuestro Trabajo y Propiedad Creativa</h3>
-            <p>Todo el arte, renders 3D, animaciones, diseños y textos que ves en este sitio son el resultado de nuestro esfuerzo, dedicación y pasión (o de proyectos en los que hemos colaborado). Por respeto al trabajo creativo, te pedimos no descargar, alterar ni usar nuestro contenido para fines comerciales sin consultarlo y acordarlo previamente con nosotros.</p>
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">2. Propiedad intelectual y derechos de autor</h3>
+            <p>Todo el contenido publicado en este Sitio — incluyendo pero no limitado a: renders 3D, modelos tridimensionales, animaciones, textos, diseños gráficos, logotipos, videos, código fuente y cualquier material audiovisual — es propiedad exclusiva de <strong>3Dream Studios</strong> y/o de sus respectivos autores, y está protegido por las leyes mexicanas e internacionales de propiedad intelectual, incluyendo:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>La <strong>Ley Federal del Derecho de Autor</strong> (LFDA) de México.</li>
+                <li>La <strong>Ley de la Propiedad Industrial</strong> de México.</li>
+                <li>El <strong>Convenio de Berna</strong> para la Protección de las Obras Literarias y Artísticas.</li>
+                <li>Los tratados internacionales de los que México es parte.</li>
+            </ul>
+            <p><strong>Queda estrictamente prohibido</strong> sin autorización previa por escrito de 3Dream Studios:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>Copiar, reproducir, distribuir o modificar cualquier contenido del Sitio.</li>
+                <li>Usar nuestro contenido con fines comerciales, publicitarios o de reventa.</li>
+                <li>Descompilar, aplicar ingeniería inversa o extraer el código fuente del Sitio.</li>
+                <li>Utilizar técnicas de web scraping o datos mining sobre nuestro contenido.</li>
+                <li>Presentar nuestro trabajo como propio ante terceros.</li>
+            </ul>
+            <p>El incumplimiento de estas disposiciones podrá dar lugar a las acciones legales correspondientes conforme a la legislación mexicana aplicable.</p>
 
-            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">3. Cotizaciones y Colaboraciones</h3>
-            <p>Cualquier información que nos compartas a través del formulario de cotización será tratada con absoluta discreción y profesionalismo. Al enviarnos una solicitud, estaremos encantados de evaluar tu proyecto, proponer ideas y estimar costos. Este proceso es informativo; el desarrollo del proyecto comenzará formalmente una vez que ambas partes estemos de acuerdo con los objetivos, tiempos y costos mediante un acuerdo de servicio.</p>
-            <p><em>Nota: Actualmente operamos como un estudio creativo independiente. En esta etapa de inicio, los trámites y facturación los manejamos conforme a nuestras capacidades como profesionales autónomos. Te garantizamos total transparencia, atención personalizada y un compromiso de primer nivel en la entrega de cada proyecto.</em></p>
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">3. Servicios y cotizaciones</h3>
+            <p>Las cotizaciones emitidas por 3Dream Studios son de carácter informativo y tienen una <strong>vigencia de 30 días naturales</strong> a partir de su fecha de emisión, salvo que se indique lo contrario. El inicio formal de cualquier proyecto requiere:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>Acuerdo mutuo sobre alcance, entregables y precio.</li>
+                <li>Aceptación expresa de ambas partes (vía correo electrónico, WhatsApp u otro medio verificable).</li>
+                <li>Pago del anticipo acordado, cuando aplique.</li>
+            </ul>
 
-            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">4. Claridad en las Expectativas</h3>
-            <p>Nos enorgullece mostrar nuestro trabajo con la más alta calidad y transparencia. El desarrollo 3D involucra detalles técnicos y creativos fascinantes; es por ello que trabajaremos contigo hombro a hombro para asegurar que el resultado cumpla con lo que imaginas. 3Dream Studios actúa siempre de buena fe para brindarte el mejor servicio posible, centrando nuestra responsabilidad en cumplir con éxito el trabajo que acordemos juntos.</p>
-        </div>
-        
-    </main>
-    <!-- Footer -->
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
-                    Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
-                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">4. Proceso de trabajo y entregas</h3>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>Cada proyecto incluye las rondas de revisión especificadas en la cotización.</li>
+                <li>Revisiones adicionales fuera del alcance acordado podrán generar costos extras.</li>
+                <li>Los archivos fuente del proyecto (archivos .blend, texturas originales, etc.) permanecen como propiedad de 3Dream Studios, salvo acuerdo explícito por escrito.</li>
+                <li>Se entregarán al cliente los formatos finales acordados (PNG, JPG, MP4, GLB, etc.).</li>
+            </ul>
+
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">5. Propiedad de los trabajos contratados</h3>
+            <p>Una vez liquidado el pago total del proyecto:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>El cliente obtiene una <strong>licencia de uso</strong> sobre los entregables finales para los fines acordados.</li>
+                <li>3Dream Studios se reserva el derecho de usar el proyecto terminado en su portafolio, redes sociales y materiales promocionales, salvo que se firme un acuerdo de confidencialidad (NDA).</li>
+                <li>La cesión completa de derechos patrimoniales requerirá un acuerdo separado por escrito y puede implicar un costo adicional.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">6. Confidencialidad</h3>
+            <p>3Dream Studios se compromete a mantener la confidencialidad de las ideas, conceptos y materiales proporcionados por el cliente. No compartiremos tu información de proyecto con terceros sin tu consentimiento expreso. Si tu proyecto requiere un nivel elevado de confidencialidad, podemos formalizar un Acuerdo de No Divulgación (NDA).</p>
+
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">7. Limitación de responsabilidad</h3>
+            <p>3Dream Studios actúa de buena fe en todos sus servicios. Sin embargo:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>No garantizamos que el Sitio esté disponible de forma ininterrumpida o libre de errores.</li>
+                <li>No nos hacemos responsables por daños indirectos, incidentales o consecuentes derivados del uso del Sitio.</li>
+                <li>El cliente es responsable de verificar que el contenido solicitado no infrinja derechos de terceros.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">8. Política de cancelación</h3>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>El cliente puede cancelar el proyecto en cualquier momento notificando por escrito.</li>
+                <li>Los pagos anticipados no son reembolsables una vez que el trabajo ha comenzado formalmente.</li>
+                <li>Si el proyecto se cancela durante su ejecución, se cobrará proporcionalmente al avance realizado.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">9. Legislación aplicable y jurisdicción</h3>
+            <p>Estos Términos y Condiciones se rigen e interpretan conforme a las leyes de los <strong>Estados Unidos Mexicanos</strong>. Para cualquier controversia derivada de estos términos, las partes se someten a la jurisdicción de los tribunales competentes en el Estado de Hidalgo, México, renunciando a cualquier otro fuero que por razón de domicilio pudiera corresponderles.</p>
+
+            <h3 class="text-xl font-bold font-headline text-primary-container mt-8 mb-4 uppercase tracking-widest">10. Modificaciones</h3>
+            <p>3Dream Studios se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento. Los cambios entrarán en vigor al momento de su publicación en el Sitio. Es responsabilidad del usuario revisar periódicamente estos términos.</p>
+
+            <div class="mt-10 p-6 rounded-xl bg-neutral-900/50 border border-white/5">
+                <p class="italic text-xs text-neutral-500">
+                    <strong>Contacto legal:</strong> b.3dreamstudios@gmail.com<br>
+                    <strong>Fecha de vigencia:</strong> Abril 2026<br>
+                    Al utilizar nuestros servicios, confirmas haber leído y aceptado estos Términos y Condiciones en su totalidad.
                 </p>
             </div>
-            <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="terms.html">Términos</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="privacy.html">Privacidad</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
-            </div>
-            <button
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="material-symbols-outlined">arrow_upward</span>
-            </button>
         </div>
-    </footer>
-</body></html>
+    </main>
+
+    <div id="footer-root"></div>
+</body>
+</html>

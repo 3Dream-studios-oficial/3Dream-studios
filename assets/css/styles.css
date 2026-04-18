@@ -1,26 +1,86 @@
-body {
-    /* Color base súper oscuro para dar profundidad infinita */
-    background-color: #05010f;
+/* ==========================================================================
+   3Dream Studios — Design System & Global Styles
+   ==========================================================================
+   Architecture: BEM-inspired utility + component classes
+   Version: 2.0.0
+   
+   TABLE OF CONTENTS:
+   1. CSS Custom Properties (Design Tokens)
+   2. Base / Reset
+   3. Grain Overlay
+   4. Hero Section Parallax
+   5. Trust Bar Marquee
+   6. Scroll Progress
+   7. Cookie Banner
+   8. WhatsApp Float
+   9. FAQ Accordion
+   10. Counter Animation
+   11. Testimonial Cards
+   12. Service Cards
+   13. Form Enhancements
+   14. Loading / Skeleton
+   15. Animations & Keyframes
+   16. Accessibility
+   17. iOS / Mobile Fixes
+   18. Print Styles
+   ========================================================================== */
 
-    /* Capa 1: Resplandor superior (tu morado original) */
-    /* Capa 2: Líneas horizontales de la cuadrícula (toque Cian) */
-    /* Capa 3: Líneas verticales de la cuadrícula (toque Magenta) */
+/* ==========================================================================
+   1. CSS Custom Properties (Design Tokens)
+   ========================================================================== */
+
+:root {
+    --color-bg-deep: #05010f;
+    --color-cyan: #00E5FF;
+    --color-purple: #B34BFF;
+    --color-magenta: #FF00E5;
+    --color-surface: #131313;
+    --color-surface-high: #262626;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #d1d5db;
+    --color-text-muted: #6b7280;
+    --duration-fast: 200ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   2. Base / Reset
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+body {
+    background-color: var(--color-bg-deep);
     background-image:
         radial-gradient(circle at 50% -20%, #2d084a 0%, transparent 70%),
         linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 0, 229, 0.04) 1px, transparent 1px);
-
-    /* Tamaño de la cuadrícula: ajusta los "40px" si la quieres más grande o pequeña */
     background-size: 100% 100%, 40px 40px, 40px 40px;
     background-position: center top, center center, center center;
-
-    /* Esto hace que el fondo se quede quieto y parezca profundo cuando haces scroll */
     background-attachment: fixed;
-
     overflow-x: hidden;
     min-height: 100vh;
-    /* Asegura que cubra toda la pantalla siempre */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+/* ==========================================================================
+   3. Grain Overlay
+   ========================================================================== */
 
 .grain-overlay {
     position: fixed;
@@ -34,9 +94,17 @@ body {
     z-index: 9999;
 }
 
+/* ==========================================================================
+   Material Symbols
+   ========================================================================== */
+
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
 
 .text-glow-primary {
     text-shadow: 0 0 12px rgba(0, 242, 255, 0.4);
@@ -46,11 +114,14 @@ body {
     box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.1), 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Animations that we'll trigger from main.js */
+/* ==========================================================================
+   4. Fade-Up Animation System
+   ========================================================================== */
+
 .fade-up-element {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
 }
 
 .fade-up-element.visible {
@@ -58,7 +129,10 @@ body {
     transform: translateY(0);
 }
 
-/* --- Hero Scroll Animations (Performance-first) --- */
+/* ==========================================================================
+   5. Hero Section Parallax (Performance-first with CSS variables)
+   ========================================================================== */
+
 #hero-section {
     --hero-scroll: 0;
 }
@@ -91,12 +165,10 @@ body {
     opacity: calc(0.5 - var(--hero-scroll) * 4);
 }
 
-/* Smooth behavior */
-html {
-    scroll-behavior: smooth;
-}
+/* ==========================================================================
+   6. Trust Bar Marquee
+   ========================================================================== */
 
-/* Trust Bar Marquee */
 .trust-bar-container {
     overflow: hidden;
     white-space: nowrap;
@@ -112,7 +184,6 @@ html {
     animation: marquee 30s linear infinite;
     gap: 4rem;
     padding-left: 4rem;
-    /* Match the gap */
     align-items: center;
 }
 
@@ -121,54 +192,215 @@ html {
 }
 
 @keyframes marquee {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(-50%, 0, 0);
-    }
-
-    /* We will duplicate the content inside to loop seamlessly */
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 
-/* Basic Form Styling for Connect page */
-.cyber-input {
-    background: rgb(31, 31, 31);
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: #00f2ff !important;
-    /* Letra Cyan brillante al escribir */
-    width: 100%;
-    padding: 1rem 1rem;
-    font-family: 'Space Grotesk', sans-serif;
-    transition: all 0.3s ease;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+/* ==========================================================================
+   7. Scroll Progress Bar
+   ========================================================================== */
+
+#scroll-progress {
+    transform-origin: left;
+    will-change: width;
 }
 
-.cyber-input::placeholder {
-    color: #666691 !important;
-    /* Gris claro opaco para el placeholder */
-    opacity: 1 !important;
-    /* Fuerza la visibilidad en todos los navegadores */
+/* ==========================================================================
+   8. FAQ Accordion
+   ========================================================================== */
+
+.faq-item {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: border-color var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
 }
 
-.cyber-input:-ms-input-placeholder {
-    color: #666691 !important;
+.faq-item:hover,
+.faq-item.active {
+    border-color: rgba(0, 242, 255, 0.2);
 }
 
-.cyber-input::-ms-input-placeholder {
-    color: #666691 !important;
+.faq-item.active {
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.08);
 }
 
-.cyber-input:focus {
-    outline: none;
-    border-bottom-color: #00f2ff;
-    box-shadow: 0 10px 10px -10px rgba(0, 242, 255, 0.4);
+.faq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background var(--duration-normal) ease;
 }
 
-/* Fallback colors para garantizar legibilidad óptima (Blancos y grises claros) */
+.faq-header:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-header .faq-icon {
+    transition: transform var(--duration-normal) ease;
+}
+
+.faq-item.active .faq-header .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease-out-expo), padding 0.3s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-body {
+    max-height: 300px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+/* ==========================================================================
+   9. Counter Animation
+   ========================================================================== */
+
+.counter-value {
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    min-width: 2ch;
+}
+
+/* ==========================================================================
+   10. Service Cards
+   ========================================================================== */
+
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--duration-slow) var(--ease-out-expo),
+                border-color var(--duration-normal) ease,
+                box-shadow var(--duration-normal) ease;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 242, 255, 0.08), transparent 60%);
+    opacity: 0;
+    transition: opacity var(--duration-normal) ease;
+    pointer-events: none;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   11. Testimonial Cards
+   ========================================================================== */
+
+.testimonial-card {
+    position: relative;
+    transition: transform var(--duration-normal) var(--ease-out-expo);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+}
+
+.testimonial-card::after {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 6rem;
+    font-family: 'Noto Serif', serif;
+    color: rgba(0, 242, 255, 0.08);
+    pointer-events: none;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   12. Form Enhancements
+   ========================================================================== */
+
+.form-field-wrapper {
+    position: relative;
+}
+
+.form-field-wrapper .field-status {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all var(--duration-normal) ease;
+}
+
+.form-field-wrapper.valid .field-status {
+    opacity: 1;
+    transform: scale(1);
+    color: #34d399;
+}
+
+.form-field-wrapper.invalid .field-status {
+    opacity: 1;
+    transform: scale(1);
+    color: #f87171;
+}
+
+/* Honeypot (anti-spam) */
+.ohnohoney {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   13. Animations & Keyframes
+   ========================================================================== */
+
+@keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(0, 242, 255, 0.5); }
+}
+
+@keyframes count-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.animate-float-y {
+    animation: float-y 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   14. Fallback Colors (Readability Guarantees)
+   ========================================================================== */
+
 body,
 .text-on-surface {
     color: #ffffff !important;
@@ -176,7 +408,6 @@ body,
 
 .text-on-surface-variant {
     color: #d1d5db !important;
-    /* Gris claro (equivalente a gray-300) */
 }
 
 .bg-surface-container-low {
@@ -197,4 +428,87 @@ body,
 
 .bg-surface {
     background-color: #2e2a30 !important;
+}
+
+/* ==========================================================================
+   15. Accessibility
+   ========================================================================== */
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-cyan);
+    color: #000;
+    font-weight: 700;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition: top var(--duration-fast) ease;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ==========================================================================
+   16. iOS / Mobile Fixes
+   ========================================================================== */
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* Prevent iOS bounce */
+@media (hover: none) and (pointer: coarse) {
+    .parallax-aura {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   17. Print Styles
+   ========================================================================== */
+
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    .grain-overlay, nav, #cookie-banner, #whatsapp-float, #scroll-progress,
+    .parallax-aura, footer button {
+        display: none !important;
+    }
+    a { color: black !important; text-decoration: underline; }
+    a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; }
 }

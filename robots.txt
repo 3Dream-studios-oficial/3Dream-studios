@@ -1,0 +1,18 @@
+# ==================================================================
+# 3Dream Studios — Robots.txt
+# Last updated: April 2026
+# ==================================================================
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Block access to internal/development files
+Disallow: /assets/js/tailwind-config.js
+Disallow: /*.md$
+
+# Sitemap location
+Sitemap: https://brandonurielcalixtog.github.io/Portafolio/sitemap.xml
+
+# Crawl-delay suggestion (optional, respected by some bots)
+Crawl-delay: 1

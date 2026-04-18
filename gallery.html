@@ -4,117 +4,86 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Galería | 3Dream Studios</title>
-    <!-- SEO & Marketing Meta Tags -->
+    <title>Galería de Proyectos 3D | 3Dream Studios — Portafolio CGI</title>
     <meta name="description"
-        content="Descubre nuestros proyectos destacados en 3Dream Studios: Modelado 3D, CGI, Arquitectura Espacial y Texturizado Avanzado." />
+        content="Explora el portafolio de 3Dream Studios: Modelado 3D, renders fotorealistas, personajes estilizados y visualizaciones de producto. Descubre nuestro trabajo." />
     <meta name="keywords"
-        content="3Dream Studios, Galería 3D, Portafolio CGI, Renders Fotorealistas, Proyectos VR AR" />
+        content="portafolio 3D, galería renders, CGI México, modelado 3D portafolio, renders fotorealistas, proyectos VR AR" />
     <meta name="author" content="3Dream Studios" />
-    <!-- Open Graph / Meta Social Media -->
-    <meta property="og:title" content="Galería de Proyectos | 3Dream Studios" />
-    <meta property="og:description"
-        content="El archivo de visiones: explora nuestro arte 3D y simulaciones inmersivas." />
-    <meta property="og:image"
-        content="https://brandonurielcalixtog.github.io/Portafolio/assets/renders/b3.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://brandonurielcalixtog.github.io/Portafolio/gallery.html" />
     <meta property="og:type" content="website" />
-    <!-- Favicon -->
+    <meta property="og:url" content="https://brandonurielcalixtog.github.io/Portafolio/gallery.html" />
+    <meta property="og:title" content="Galería de Proyectos | 3Dream Studios" />
+    <meta property="og:description" content="El archivo de visiones: explora nuestro arte 3D y simulaciones inmersivas." />
+    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/renders/b3.png" />
+    <meta property="og:locale" content="es_MX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Galería 3D | 3Dream Studios" />
+    <meta name="twitter:description" content="Portafolio de modelado 3D, CGI y renders fotorealistas." />
+    <meta name="twitter:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/renders/b3.png" />
     <link rel="icon" href="assets/img/logo.png" type="image/png" />
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://brandonurielcalixtog.github.io/Portafolio/"},
+            {"@type": "ListItem", "position": 2, "name": "Galería"}
+        ]
+    }
+    </script>
 </head>
 
-<body
-    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+<body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
     <div class="grain-overlay"></div>
+    <div id="nav-root"></div>
 
-    <!-- Navigation -->
-    <nav
-        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="3Dream Studios Logo"
-                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
-                <span
-                    class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
-                    3Dream Studios
-                </span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="gallery.html">Galería</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="universe.html">Universo</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="process.html">Proceso</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="archive.html">Archivo</a>
-            </div>
-            <div class="flex items-center">
-            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
-                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
-            </a>
-            <button id="mobile-menu-btn" class="md:hidden ml-4 p-2 text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center rounded-full bg-neutral-900 border border-white/10" aria-label="Toggle Menu">
-                <span class="material-symbols-outlined text-2xl pointer-events-none">menu</span>
-            </button>
-        </div>
-        </div>
-        
-                <div id="mobile-menu" class="hidden absolute top-full left-0 w-full h-[calc(100vh-1px)] bg-neutral-950 border-t border-white/10 flex-col items-center justify-center gap-10 z-50 overflow-hidden transition-all duration-500 opacity-0 translate-y-[-20px]">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 opacity-50"></div>
-            
-            <div id="mobile-links-container" class="flex flex-col items-center gap-8 w-full relative z-10"></div>
-            
-            <div class="mt-8 relative z-10">
-                <p class="font-headline font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500 tracking-[0.4em] text-xs opacity-70">
-                    BEYOND REALITY
-                </p>
-            </div>
-        </div>
-    </nav>
+    <main id="main-content" class="relative overflow-hidden pt-32 pb-24 min-h-screen container max-w-screen-2xl px-8 mx-auto">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-8 fade-up-element">
+            <ol class="flex items-center gap-2 font-label text-xs tracking-widest uppercase text-neutral-500">
+                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                <li><span class="text-neutral-600 mx-1">/</span></li>
+                <li class="text-cyan-400" aria-current="page">Galería</li>
+            </ol>
+        </nav>
 
-    <!-- Content -->
-    <main class="relative overflow-hidden pt-32 pb-24 min-h-screen container max-w-screen-2xl px-8 mx-auto">
         <!-- Background Auras -->
-        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"
-            data-speed="40"></div>
-        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none"
-            data-speed="-20"></div>
-        <h1
-            class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-8 fade-up-element">
-            THE ARCHIVE OF
-            <span
-                class="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#448AFF] via-[#B34BFF] to-[#FF00E5] pb-2 md:pb-6">VISIONS</span>
+        <div class="parallax-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container/10 blur-[120px] rounded-full pointer-events-none" data-speed="40"></div>
+        <div class="parallax-aura absolute top-1/3 left-2/3 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary-container/10 blur-[100px] rounded-full pointer-events-none" data-speed="-20"></div>
+
+        <h1 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-8 fade-up-element">
+            ARCHIVO DE
+            <span class="block bg-clip-text text-transparent bg-gradient-to-r from-[#00E5FF] via-[#448AFF] via-[#B34BFF] to-[#FF00E5] pb-2 md:pb-6">VISIONES</span>
         </h1>
-        <p class="font-body italic text-on-surface-variant text-xl mb-16 max-w-2xl fade-up-element"
-            style="transition-delay:0.1s;">Conoce de nuestros proyectos creativos.</p>
+        <p class="font-body italic text-on-surface-variant text-xl mb-16 max-w-2xl fade-up-element" style="transition-delay:0.1s;">
+            Conoce nuestros proyectos creativos. Cada obra es una pieza única de ingeniería visual.
+        </p>
 
         <div class="space-y-32">
             <!-- Project 1 -->
             <article id="neon-void" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="rounded-xl overflow-hidden glass-edge group">
-                    <img alt="Project Voocho"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/voocho16.png" />
+                    <img alt="Render 3D interior del Volkswagen Vocho con iluminación nocturna" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/voocho16.png" width="800" height="500" />
                 </div>
                 <div>
-                    <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-2 block">Diseño
-                        Automotriz</span>
+                    <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-2 block">Diseño Automotriz</span>
                     <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">CONCEPTO VOCHO</h2>
                     <p class="font-body italic text-on-surface-variant mb-6">Una vista que captura la sensación de viajar en un clásico. Nos enfocamos en los detalles del interior para transmitir un ambiente nocturno nostálgico y auténtico.</p>
-                    <a href="projects/proyecto-vocho.html"
-                        class="inline-flex items-center gap-2 text-primary-container hover:text-white transition-colors border-b border-primary-container pb-1 font-headline uppercase tracking-widest text-sm">
+                    <a href="projects/proyecto-vocho.html" class="inline-flex items-center gap-2 text-primary-container hover:text-white transition-colors border-b border-primary-container pb-1 font-headline uppercase tracking-widest text-sm">
                         Adentrarse al Proyecto <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
@@ -123,36 +92,28 @@
             <!-- Project 2 -->
             <article id="liquid-state" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="order-2 md:order-1">
-                    <span class="font-label text-secondary text-xs tracking-widest uppercase mb-2 block">Estudio de
-                        Materiales</span>
+                    <span class="font-label text-secondary text-xs tracking-widest uppercase mb-2 block">Estudio de Materiales</span>
                     <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">AJEDREZ</h2>
                     <p class="font-body italic text-on-surface-variant mb-6">Escena que resalta la calidez de la madera barnizada. Un enfoque realista que le da un toque único y detallado a un tablero de juego.</p>
-                    <a href="projects/proyecto-ajedrez.html"
-                        class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors border-b border-secondary pb-1 font-headline uppercase tracking-widest text-sm">
+                    <a href="projects/proyecto-ajedrez.html" class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors border-b border-secondary pb-1 font-headline uppercase tracking-widest text-sm">
                         Adentrarse al Proyecto <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
                 <div class="rounded-xl overflow-hidden glass-edge group order-1 md:order-2">
-                    <img alt="Chess Render"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/ajedrez1.png" />
+                    <img alt="Render fotorealista de tablero de ajedrez de madera barnizada" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/ajedrez1.png" width="800" height="500" />
                 </div>
             </article>
 
             <!-- Project 3 -->
             <article id="retro-combi" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="rounded-xl overflow-hidden glass-edge group">
-                    <img alt="Combi Clásica"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/combi04.jpeg" />
+                    <img alt="Render del interior de una Combi Volkswagen clásica" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/combi04.jpeg" width="800" height="500" />
                 </div>
                 <div>
-                    <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-2 block">Iconos
-                        del Pasado</span>
+                    <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-2 block">Iconos del Pasado</span>
                     <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">COMBI CLÁSICA</h2>
                     <p class="font-body italic text-on-surface-variant mb-6">Recreación nostálgica del interior. Atención meticulosa a las texturas del cuero agrietado y la madera para un ambiente genuino.</p>
-                    <a href="projects/proyecto-combi.html"
-                        class="inline-flex items-center gap-2 text-primary-container hover:text-white transition-colors border-b border-primary-container pb-1 font-headline uppercase tracking-widest text-sm">
+                    <a href="projects/proyecto-combi.html" class="inline-flex items-center gap-2 text-primary-container hover:text-white transition-colors border-b border-primary-container pb-1 font-headline uppercase tracking-widest text-sm">
                         Adentrarse al Proyecto <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
@@ -161,23 +122,19 @@
             <!-- Project 4 -->
             <article id="golden-pig" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="order-2 md:order-1">
-                    <span class="font-label text-secondary text-xs tracking-widest uppercase mb-2 block">Modelado de
-                        Personaje</span>
+                    <span class="font-label text-secondary text-xs tracking-widest uppercase mb-2 block">Modelado de Personaje</span>
                     <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">CERDITO STYLIZED</h2>
                     <p class="font-body italic text-on-surface-variant mb-6">Un personaje de pelaje suave y mirada expresiva que demuestra nuestro estilo para crear figuras entrañables y originales.</p>
-                    <a href="projects/proyecto-guardian.html"
-                        class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors border-b border-secondary pb-1 font-headline uppercase tracking-widest text-sm">
+                    <a href="projects/proyecto-guardian.html" class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors border-b border-secondary pb-1 font-headline uppercase tracking-widest text-sm">
                         Adentrarse al Proyecto <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
                 <div class="rounded-xl overflow-hidden glass-edge group order-1 md:order-2">
-                    <img alt="Cerdito de Oro"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/puerco1.jpg" />
+                    <img alt="Render 3D estilizado de un cerdito guardián con pelaje suave" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/puerco1.jpg" width="800" height="500" />
                 </div>
             </article>
 
-            <!-- Project 5: 3D Showcase (CASCO) -->
+            <!-- Project 5: CASCO -->
             <article id="casco-3d" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="rounded-xl overflow-hidden glass-edge group">
                     <div class="relative w-full aspect-video bg-neutral-900 flex items-center justify-center">
@@ -189,37 +146,31 @@
                     <span class="font-label text-[#00E5FF] text-xs tracking-widest uppercase mb-2 block">Interactividad 3D</span>
                     <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">CASCO FUTURISTA</h2>
                     <p class="font-body italic text-on-surface-variant mb-6">Un concepto donde el desgaste y los rayones cuentan su historia. Acabados metálicos y detalles auténticos de este casco vanguardista en 3D.</p>
-                    <a href="projects/casco-3d.html"
-                        class="inline-flex items-center gap-2 text-primary-container hover:text-white transition-colors border-b border-primary-container pb-1 font-headline uppercase tracking-widest text-sm">
+                    <a href="projects/casco-3d.html" class="inline-flex items-center gap-2 text-primary-container hover:text-white transition-colors border-b border-primary-container pb-1 font-headline uppercase tracking-widest text-sm">
                         Ver en 3D Interactivo <span class="material-symbols-outlined">explore</span>
                     </a>
                 </div>
             </article>
 
-            <!-- Project 6: RELOJ DE LUJO -->
+            <!-- Project 6: RELOJ -->
             <article id="reloj-lujo" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="order-2 md:order-1">
                     <span class="font-label text-secondary text-xs tracking-widest uppercase mb-2 block">Experiencia Interactiva</span>
                     <h2 class="font-headline text-4xl font-bold text-on-surface mb-6">RELOJ DE LUJO</h2>
                     <p class="font-body italic text-on-surface-variant mb-6">Exploración visual enfocada en la elegancia. El nivel de detalle en cada pieza metálica refleja nuestra dedicación por lo auténtico y la sofisticación técnica.</p>
-                    <a href="projects/reloj-3d.html"
-                        class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors border-b border-secondary pb-1 font-headline uppercase tracking-widest text-sm">
+                    <a href="projects/reloj-3d.html" class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors border-b border-secondary pb-1 font-headline uppercase tracking-widest text-sm">
                         Adentrarse al Proyecto <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
                 <div class="rounded-xl overflow-hidden glass-edge group order-1 md:order-2">
-                    <img alt="Reloj de Lujo"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/reloj2.png" />
+                    <img alt="Render fotorealista de reloj de lujo con detalles metálicos" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/reloj2.png" width="800" height="500" />
                 </div>
             </article>
 
-            <!-- Project 7: EL SANTUARIO -->
+            <!-- Project 7: ANGEL -->
             <article id="cyber-floral" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="rounded-xl overflow-hidden glass-edge group">
-                    <img alt="El Santuario"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/Angel02.jpg" />
+                    <img alt="Render artístico de escultura de ángel con iluminación etérea" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/Angel02.jpg" width="800" height="500" />
                 </div>
                 <div>
                     <span class="font-label text-primary-container text-xs tracking-widest uppercase mb-2 block">Ambiente Majestuoso</span>
@@ -228,7 +179,7 @@
                 </div>
             </article>
 
-            <!-- Project 8: EL VISITANTE -->
+            <!-- Project 8: ALIEN -->
             <article id="orbital" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center fade-up-element">
                 <div class="order-2 md:order-1">
                     <span class="font-label text-secondary-container text-xs tracking-widest uppercase mb-2 block">Imaginación Lúdica</span>
@@ -236,40 +187,13 @@
                     <p class="font-body italic text-on-surface-variant mb-6">Un modelo de criatura estilizada y fascinante. Este render exhibe la capacidad para modelar personajes fuera de lo común, capturando formas inusuales con texturas convincentes.</p>
                 </div>
                 <div class="rounded-xl overflow-hidden glass-edge group order-1 md:order-2">
-                    <img alt="El Visitante"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy" src="assets/renders/alien.jpeg" />
+                    <img alt="Modelo 3D estilizado de una criatura alienígena con texturas realistas" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" src="assets/renders/alien.jpeg" width="800" height="500" />
                 </div>
             </article>
         </div>
     </main>
-    <!-- Footer -->
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
-                    Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
-                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
-                </p>
-            </div>
-            <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="terms.html">Términos</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="privacy.html">Privacidad</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
-            </div>
-            <button
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="material-symbols-outlined">arrow_upward</span>
-            </button>
-        </div>
-    </footer>
+
+    <div id="footer-root"></div>
 </body>
 
 </html>

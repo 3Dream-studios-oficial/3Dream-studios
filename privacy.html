@@ -1,101 +1,116 @@
-�<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="es">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Política de Privacidad | 3Dream Studios</title>
+    <title>Aviso de Privacidad | 3Dream Studios — LFPDPPP</title>
+    <meta name="description" content="Aviso de Privacidad de 3Dream Studios conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP). Conoce cómo protegemos tu información." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://brandonurielcalixtog.github.io/Portafolio/privacy.html" />
+    <meta property="og:title" content="Aviso de Privacidad | 3Dream Studios" />
+    <meta property="og:description" content="Cómo protegemos tu información personal conforme a la LFPDPPP." />
+    <meta property="og:locale" content="es_MX" />
+    <link rel="icon" href="assets/img/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <link href="assets/css/styles.css" rel="stylesheet"/>
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 </head>
 <body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
-    <div class="grain-overlay"></div>    <!-- Navigation -->
-    <nav class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950 shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="3Dream Studios Logo"
-                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
-                <span class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
-                    3Dream Studios
-                </span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="gallery.html">Galería</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="universe.html">Universo</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="process.html">Proceso</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300" href="archive.html">Archivo</a>
-            </div>
-            <a href="cotizar.html" class="bg-primary-container text-on-primary px-6 py-2 font-headline font-bold uppercase tracking-widest rounded shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300">
-                Cotizar
-            </a>
-        </div>
-    </nav>
-    <main class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-md px-8 mx-auto fade-up-element text-left">
-        <!-- Background Auras -->
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+    <div class="grain-overlay"></div>
+    <div id="nav-root"></div>
+
+    <main id="main-content" class="relative overflow-hidden pt-40 pb-24 min-h-screen container max-w-screen-md px-8 mx-auto fade-up-element text-left">
+        <nav aria-label="Breadcrumb" class="mb-8">
+            <ol class="flex items-center gap-2 font-label text-xs tracking-widest uppercase text-neutral-500">
+                <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                <li><span class="text-neutral-600 mx-1">/</span></li>
+                <li class="text-cyan-400" aria-current="page">Privacidad</li>
+            </ol>
+        </nav>
+
         <div class="parallax-aura absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary-container/10 blur-[120px] rounded-full pointer-events-none" data-speed="-20"></div>
         
         <h1 class="font-headline text-4xl md:text-5xl font-black uppercase tracking-tighter text-primary drop-shadow-2xl mb-8 border-b border-primary-container/30 pb-6">
-            POLÍTICA DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">PRIVACIDAD</span>
+            AVISO DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-secondary-container">PRIVACIDAD</span>
         </h1>
 
         <div class="prose prose-invert prose-p:text-on-surface-variant prose-headings:text-on-surface max-w-none font-body space-y-6">
             <p><strong>Última actualización:</strong> Abril 2026</p>
-            <p>En <strong>3Dream Studios</strong> ("nosotros", "nuestro estudio"), sabemos lo importante que es tu tranquilidad. Esta Política de Privacidad tiene como objetivo explicarte de manera clara y transparente cómo manejamos la información que decides compartir con nosotros cuando visitas nuestro portafolio o nos contactas.</p>
-
-            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">1. Información que recibimos</h3>
-            <p>Recopilamos únicamente los datos necesarios para entender tu proyecto y poder comunicarnos contigo. Esto ocurre, por ejemplo, cuando llenas nuestro formulario de "Cotizar". Los datos pueden incluir:</p>
-            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
-                <li>Tu nombre y correo electrónico.</li>
-                <li>Los detalles, ideas y requerimientos del proyecto que tienes en mente.</li>
-                <li>Cualquier mensaje adicional que nos envíes a través de nuestras redes sociales.</li>
-            </ul>
-
-            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">2. ¿Para qué usamos esta información?</h3>
-            <p>Tus datos están seguros con nosotros y los utilizamos exclusivamente para:</p>
-            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
-                <li>Analizar la viabilidad, los tiempos y los costos para hacer realidad tu proyecto de diseño 3D o renderizado.</li>
-                <li>Responder a tus consultas y enviarte la propuesta correspondiente.</li>
-                <li>Mantener una comunicación fluida contigo durante el proceso creativo a través de correo o WhatsApp.</li>
-            </ul>
-
-            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">3. Herramientas y Plataformas Externas</h3>
-            <p>Para estar en contacto de forma directa y rápida, solemos comunicarnos mediante aplicaciones de terceros (como WhatsApp o correo electrónico). Es importante mencionar que estas herramientas tienen sus propias políticas de privacidad. Siempre te recomendaremos compartir tu información a través de los canales en los que te sientas más cómodo y seguro.</p>
-
-            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">4. Transparencia y Confianza</h3>
-            <p>Actualmente somos un estudio creativo independiente en fase de crecimiento. Nos comprometemos enteramente a no compartir, vender ni hacer mal uso de la información o ideas de tus proyectos. Si en algún momento deseas que dejemos de comunicarnos contigo o que eliminemos tu información de nuestros registros, no dudes en hacérnoslo saber.</p>
             
-            <p class="mt-8 italic text-xs text-neutral-500">Si tienes dudas sobre cómo cuidamos tu información, escríbenos directamente desde la sección de contacto o a través de nuestras redes sociales.</p>
-        </div>
-        
-    </main>
-    <!-- Footer -->
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
-                    Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
-                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
+            <p>En <strong>3Dream Studios</strong> (en adelante "el Responsable"), con domicilio para efectos del presente aviso en territorio mexicano, somos responsables del tratamiento de tus datos personales. Este Aviso de Privacidad se emite en cumplimiento de la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> y su Reglamento.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">1. Datos personales que recabamos</h3>
+            <p>Para las finalidades señaladas en este aviso, podemos recabar las siguientes categorías de datos personales:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li><strong>Datos de identificación:</strong> Nombre completo.</li>
+                <li><strong>Datos de contacto:</strong> Correo electrónico, número de teléfono (cuando se proporciona vía WhatsApp).</li>
+                <li><strong>Datos de proyecto:</strong> Descripción de la idea, requerimientos técnicos, tipo de servicio solicitado.</li>
+            </ul>
+            <p>No recabamos datos personales sensibles (religiosos, de salud, orientación sexual, datos biométricos, entre otros).</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">2. Finalidades del tratamiento</h3>
+            <p><strong>Finalidades primarias (necesarias):</strong></p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>Evaluar la viabilidad técnica y creativa de tu proyecto.</li>
+                <li>Elaborar y enviar cotizaciones y propuestas de servicio.</li>
+                <li>Establecer comunicación directa para el desarrollo del proyecto contratado.</li>
+                <li>Cumplir con obligaciones derivadas de la relación comercial.</li>
+            </ul>
+            <p><strong>Finalidades secundarias (opcionales):</strong></p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>Enviar novedades, portafolio actualizado o contenido promocional del estudio.</li>
+                <li>Realizar estadísticas internas para mejorar nuestros servicios.</li>
+            </ul>
+            <p>Si no deseas que tus datos sean tratados para finalidades secundarias, puedes comunicarlo al correo indicado más adelante.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">3. Transferencia de datos</h3>
+            <p>3Dream Studios <strong>no vende, alquila ni comparte</strong> tus datos personales con terceros, salvo en los siguientes supuestos permitidos por la ley:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li>Cuando sea requerido por autoridades competentes en los términos de la legislación aplicable.</li>
+                <li>Cuando sea necesario para la prestación del servicio contratado (ej. entrega de archivos digitales mediante plataformas de almacenamiento en la nube).</li>
+            </ul>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">4. Derechos ARCO</h3>
+            <p>Tienes derecho a <strong>Acceder, Rectificar, Cancelar u Oponerte</strong> (derechos ARCO) al tratamiento de tus datos personales. Para ejercer cualquiera de estos derechos, envía tu solicitud a:</p>
+            <ul class="list-disc pl-6 space-y-2 text-on-surface-variant">
+                <li><strong>Correo:</strong> b.3dreamstudios@gmail.com</li>
+                <li><strong>Asunto:</strong> "Derechos ARCO - [Tu nombre]"</li>
+            </ul>
+            <p>Tu solicitud deberá contener: nombre completo, descripción clara de los datos y el derecho que deseas ejercer. Responderemos en un plazo máximo de <strong>20 días hábiles</strong> contados a partir de la recepción de tu solicitud.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">5. Uso de cookies y tecnologías de rastreo</h3>
+            <p>Nuestro sitio web utiliza cookies funcionales esenciales para su correcto funcionamiento. No utilizamos cookies de terceros para publicidad dirigida. Al navegar en nuestro sitio, puedes aceptar o rechazar el uso de cookies a través del banner de consentimiento.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">6. Herramientas y plataformas externas</h3>
+            <p>Para la comunicación utilizamos servicios de terceros como WhatsApp (Meta Platforms, Inc.) y Gmail (Google LLC). Estas plataformas tienen sus propias políticas de privacidad que te recomendamos consultar. 3Dream Studios no se hace responsable del tratamiento de datos que realicen dichas plataformas de forma independiente.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">7. Medidas de seguridad</h3>
+            <p>Implementamos medidas de seguridad administrativas, técnicas y físicas razonables para proteger tus datos personales contra daño, pérdida, alteración, destrucción o uso no autorizado.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">8. Modificaciones al aviso de privacidad</h3>
+            <p>Nos reservamos el derecho de modificar este Aviso de Privacidad en cualquier momento. Cualquier cambio será publicado en esta misma página con la fecha de última actualización. Te recomendamos revisar periódicamente este aviso.</p>
+
+            <h3 class="text-xl font-bold font-headline text-secondary mt-8 mb-4 uppercase tracking-widest">9. Consentimiento</h3>
+            <p>Al proporcionar tus datos personales a través de nuestro formulario de cotización, correo electrónico o WhatsApp, manifiestas tu consentimiento para que sean tratados conforme a los términos de este Aviso de Privacidad.</p>
+            
+            <div class="mt-10 p-6 rounded-xl bg-neutral-900/50 border border-white/5">
+                <p class="italic text-xs text-neutral-500">
+                    <strong>Responsable:</strong> 3Dream Studios<br>
+                    <strong>Contacto:</strong> b.3dreamstudios@gmail.com<br>
+                    <strong>Fecha de emisión:</strong> Abril 2026<br>
+                    Este aviso se emite en cumplimiento de los artículos 15, 16 y 17 de la LFPDPPP.
                 </p>
             </div>
-            <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="terms.html">Términos</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="privacy.html">Privacidad</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
-            </div>
-            <button
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="material-symbols-outlined">arrow_upward</span>
-            </button>
         </div>
-    </footer>
-</body></html>
+    </main>
+
+    <div id="footer-root"></div>
+</body>
+</html>

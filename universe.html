@@ -1,247 +1,136 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Universo | 3Dream Studios</title>
-    <meta name="description"
-        content="Explora el Universo de 3Dream Studios. Conoce nuestra visión y manifiesto sobre la arquitectura espacial y el arte 3D inmersivo." />
-    <meta name="keywords" content="3Dream Studios, Universo 3D, Manifiesto, Visión VR AR, Arquitectura Espacial" />
+    <title>Nuestro Universo Creativo | 3Dream Studios — Visión y Misión</title>
+    <meta name="description" content="Conoce la visión, misión y valores de 3Dream Studios. Somos artesanos visuales enfocados en la originalidad, creando arte 3D que trasciende lo ordinario." />
+    <meta name="keywords" content="3Dream Studios, sobre nosotros, visión estudio 3D, misión creativa, valores diseño digital, artesanía visual" />
     <meta name="author" content="3Dream Studios" />
-    <meta property="og:title" content="Universo | 3Dream Studios" />
-    <meta property="og:description"
-        content="Somos artesanos de lo inmaterial y lo absoluto. Explora nuestro universo." />
-    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/img/logo.png" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://brandonurielcalixtog.github.io/Portafolio/universe.html" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brandonurielcalixtog.github.io/Portafolio/universe.html" />
+    <meta property="og:title" content="Universo | 3Dream Studios" />
+    <meta property="og:description" content="Somos artesanos de lo inmaterial y lo absoluto. Explora nuestro universo creativo." />
+    <meta property="og:image" content="https://brandonurielcalixtog.github.io/Portafolio/assets/img/logo.png" />
+    <meta property="og:locale" content="es_MX" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nuestro Universo | 3Dream Studios" />
+    <meta name="twitter:description" content="Visión, misión y valores de 3Dream Studios." />
     <link rel="icon" href="assets/img/logo.png" type="image/png" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <script src="assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="assets/js/components.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://brandonurielcalixtog.github.io/Portafolio/"},{"@type":"ListItem","position":2,"name":"Universo"}]}
+    </script>
 </head>
-
-<body
-    class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+<body class="flex flex-col min-h-screen font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
     <div class="grain-overlay pointer-events-none"></div>
-    <nav
-        class="fixed top-0 w-full rounded-b-lg border-b border-white/10 bg-neutral-950/40 backdrop-blur-xl shadow-[0_0_40px_rgba(0,242,255,0.06)] z-50 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
-            <a href="index.html" class="flex items-center gap-4 group">
-                <img src="assets/img/logo.png" alt="3Dream Studios Logo"
-                    class="h-12 w-auto mix-blend-screen group-hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)] transition-all duration-300">
-                <span
-                    class="hidden sm:block text-2xl font-black tracking-widest text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline uppercase">
-                    3Dream Studios
-                </span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-tighter text-sm">
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="gallery.html">Galería</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="universe.html">Universo</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="process.html">Proceso</a>
-                <a class="text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105 transition-all duration-300"
-                    href="archive.html">Archivo</a>
-            </div>
-            <div class="flex items-center">
-            <a href="cotizar.html" class="relative group px-6 py-2 rounded-full overflow-hidden flex items-center gap-2 bg-neutral-900 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,242,255,0.15)] hover:shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:border-cyan-400 transition-all duration-500">
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span class="material-symbols-outlined text-cyan-400 text-xl group-hover:scale-110 transition-transform relative z-10">bolt</span>
-                <span class="font-headline font-bold uppercase tracking-[0.2em] text-white text-sm relative z-10 group-hover:text-cyan-300 transition-colors">Cotizar</span>
-            </a>
-            <button id="mobile-menu-btn" class="md:hidden ml-4 p-2 text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center rounded-full bg-neutral-900 border border-white/10" aria-label="Toggle Menu">
-                <span class="material-symbols-outlined text-2xl pointer-events-none">menu</span>
-            </button>
-        </div>
-        </div>
-        
-                <div id="mobile-menu" class="hidden absolute top-full left-0 w-full h-[calc(100vh-1px)] bg-neutral-950 border-t border-white/10 flex-col items-center justify-center gap-10 z-50 overflow-hidden transition-all duration-500 opacity-0 translate-y-[-20px]">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 opacity-50"></div>
-            
-            <div id="mobile-links-container" class="flex flex-col items-center gap-8 w-full relative z-10"></div>
-            
-            <div class="mt-8 relative z-10">
-                <p class="font-headline font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500 tracking-[0.4em] text-xs opacity-70">
-                    BEYOND REALITY
-                </p>
-            </div>
-        </div>
-    </nav>
-    <main class="relative bg-neutral-950 min-h-screen text-on-surface">
+    <div id="nav-root"></div>
+
+    <main id="main-content" class="relative bg-neutral-950 min-h-screen text-on-surface">
+        <!-- Hero -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-20">
+            <!-- Breadcrumb -->
+            <nav aria-label="Breadcrumb" class="absolute top-28 left-8 z-20">
+                <ol class="flex items-center gap-2 font-label text-xs tracking-widest uppercase text-neutral-500">
+                    <li><a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a></li>
+                    <li><span class="text-neutral-600 mx-1">/</span></li>
+                    <li class="text-cyan-400" aria-current="page">Universo</li>
+                </ol>
+            </nav>
             <div class="absolute inset-0 z-0">
-                <div
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/20 blur-[150px] rounded-full animate-pulse opacity-70">
-                </div>
-                <div class="absolute top-[40%] left-[60%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary-container/20 blur-[120px] rounded-full opacity-50 mix-blend-screen"
-                    style="animation: spin 30s linear infinite;"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-container/20 blur-[150px] rounded-full animate-pulse opacity-70"></div>
+                <div class="absolute top-[40%] left-[60%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary-container/20 blur-[120px] rounded-full opacity-50 mix-blend-screen" style="animation: spin 30s linear infinite;"></div>
                 <div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-neutral-950 to-transparent"></div>
             </div>
-
-            <div
-                class="relative z-10 text-center px-8 fade-up-element w-full max-w-7xl mx-auto flex flex-col items-center">
-                <span
-                    class="material-symbols-outlined text-6xl md:text-8xl text-secondary-container mb-8 block animate-bounce-y drop-shadow-[0_0_20px_rgba(0,242,255,0.3)]">visibility</span>
-                <h1
-                    class="font-headline text-7xl md:text-[9rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] mb-8 leading-none relative z-10">
+            <div class="relative z-10 text-center px-8 fade-up-element w-full max-w-7xl mx-auto flex flex-col items-center">
+                <span class="material-symbols-outlined text-6xl md:text-8xl text-secondary-container mb-8 block animate-bounce-y drop-shadow-[0_0_20px_rgba(0,242,255,0.3)]">visibility</span>
+                <h1 class="font-headline text-7xl md:text-[9rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.3)] mb-8 leading-none relative z-10">
                     THE
-                    <span
-                        class="block text-cyan-400 drop-shadow-[0_0_30px_rgba(0,242,255,0.8)] mt-[-5px] md:mt-[-15px] relative z-20">
-                        DREAM
-                    </span>
+                    <span class="block text-cyan-400 drop-shadow-[0_0_30px_rgba(0,242,255,0.8)] mt-[-5px] md:mt-[-15px] relative z-20">DREAM</span>
                 </h1>
-                <p
-                    class="font-body italic text-on-surface-variant text-xl md:text-3xl max-w-3xl border-l-4 border-primary-container pl-6 py-2 text-left ml-4 md:ml-0 self-center bg-neutral-950/40 backdrop-blur-sm shadow-xl rounded-r-2xl">
+                <p class="font-body italic text-on-surface-variant text-xl md:text-3xl max-w-3xl border-l-4 border-primary-container pl-6 py-2 text-left ml-4 md:ml-0 self-center bg-neutral-950/40 backdrop-blur-sm shadow-xl rounded-r-2xl">
                     Somos artesanos visuales enfocados en la <span class="text-white font-bold">originalidad</span>.
-                    Evitamos las propuestas genéricas; nuestra meta es crear obras que se sientan verdaderamente únicas
-                    e incomparables.
+                    Evitamos las propuestas genéricas; nuestra meta es crear obras que se sientan verdaderamente únicas e incomparables.
                 </p>
             </div>
         </section>
 
+        <!-- Mission -->
         <section class="relative py-32 md:py-48 px-8 overflow-hidden z-10 border-t border-white/5 bg-neutral-950">
-            <div
-                class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none transform skew-x-[-15deg] origin-top">
-            </div>
-
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none transform skew-x-[-15deg] origin-top"></div>
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-center">
                 <div class="md:w-1/2 fade-up-element z-10">
-                    <h2
-                        class="font-headline text-6xl md:text-[7rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] leading-none mb-6">
-                        NUESTRA<br>
-                        <span class="text-neutral-400">MISIÓN</span>
+                    <h2 class="font-headline text-6xl md:text-[7rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] leading-none mb-6">
+                        NUESTRA<br><span class="text-neutral-400">MISIÓN</span>
                     </h2>
                     <div class="h-[2px] w-32 bg-primary-container shadow-[0_0_15px_rgba(0,242,255,0.8)]"></div>
                 </div>
-
-                <div class="md:w-1/2 -mt-10 md:mt-32 fade-up-element relative group z-20"
-                    style="transition-delay: 0.2s;">
-                    <div
-                        class="absolute -inset-1 bg-gradient-to-r from-primary-container to-secondary-container rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
-                    </div>
-                    <div
-                        class="relative w-full p-10 md:p-14 bg-neutral-900/80 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl">
-                        <span class="material-symbols-outlined text-5xl text-primary-container mb-8 block"
-                            style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                <div class="md:w-1/2 -mt-10 md:mt-32 fade-up-element relative group z-20" style="transition-delay: 0.2s;">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary-container to-secondary-container rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative w-full p-10 md:p-14 bg-neutral-900/80 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl">
+                        <span class="material-symbols-outlined text-5xl text-primary-container mb-8 block" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
                         <p class="font-body text-xl md:text-2xl text-gray-300 leading-relaxed font-light">
-                            Nuestra misión no es simplemente renderizar, sino <strong class="text-white">infundir
-                                alma</strong>. Escapamos de los moldes genéricos para materializar conceptos visuales
-                            que desafían los sentidos.
-                            <br><br>
-                            Creamos arte con presencia pura.
+                            Nuestra misión no es simplemente renderizar, sino <strong class="text-white">infundir alma</strong>. Escapamos de los moldes genéricos para materializar conceptos visuales que desafían los sentidos.
+                            <br><br>Creamos arte con presencia pura.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Vision -->
         <section class="relative py-32 md:py-48 px-8 overflow-hidden bg-black border-t border-white/5">
-            <div
-                class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 [mask-image:linear-gradient(to_bottom,transparent,black_50%,transparent)] pointer-events-none">
-            </div>
-
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 [mask-image:linear-gradient(to_bottom,transparent,black_50%,transparent)] pointer-events-none"></div>
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="text-center mb-24 fade-up-element">
-                    <span
-                        class="font-label text-secondary-container text-sm tracking-[0.3em] uppercase mb-4 block">Proyección
-                        Hacia el Futuro</span>
+                    <span class="font-label text-secondary-container text-sm tracking-[0.3em] uppercase mb-4 block">Proyección Hacia el Futuro</span>
                     <h2 class="font-headline text-5xl md:text-[6rem] font-black uppercase tracking-tighter text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-                        LA <span
-                            class="text-[#B34BFF] drop-shadow-[0_0_25px_rgba(179,75,255,0.8)]">VISIÓN</span>
+                        LA <span class="text-[#B34BFF] drop-shadow-[0_0_25px_rgba(179,75,255,0.8)]">VISIÓN</span>
                     </h2>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div
-                        class="p-10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-primary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] transition-all duration-500 group fade-up-element">
-                        <div
-                            class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                    <div class="p-10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-primary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] transition-all duration-500 group fade-up-element">
+                        <div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                             <span class="material-symbols-outlined text-3xl text-primary-container">fingerprint</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase tracking-wider">Identidad
-                            Única</h3>
-                        <p class="font-body text-gray-400 leading-relaxed text-lg">
-                            Crear sin depender de lo genérico, buscando siempre un carácter visual incomparable frente a
-                            un mercado saturado de repetición.
-                        </p>
+                        <h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase tracking-wider">Identidad Única</h3>
+                        <p class="font-body text-gray-400 leading-relaxed text-lg">Crear sin depender de lo genérico, buscando siempre un carácter visual incomparable frente a un mercado saturado de repetición.</p>
                     </div>
-
-                    <div class="p-10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(179,75,255,0.2)] transition-all duration-500 group fade-up-element"
-                        style="transition-delay: 0.15s;">
-                        <div
-                            class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                            <span
-                                class="material-symbols-outlined text-3xl text-purple-500">precision_manufacturing</span>
+                    <div class="p-10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-purple-500 hover:shadow-[0_0_30px_rgba(179,75,255,0.2)] transition-all duration-500 group fade-up-element" style="transition-delay: 0.15s;">
+                        <div class="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-3xl text-purple-500">precision_manufacturing</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase tracking-wider">Cuidado
-                            Artesanal</h3>
-                        <p class="font-body text-gray-400 leading-relaxed text-lg">
-                            El detalle manual es el alma del diseño. Creemos que la texturización precisa y el error
-                            humano perfecto le dan vida a lo digital.
-                        </p>
+                        <h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase tracking-wider">Cuidado Artesanal</h3>
+                        <p class="font-body text-gray-400 leading-relaxed text-lg">El detalle manual es el alma del diseño. Creemos que la texturización precisa y el error humano perfecto le dan vida a lo digital.</p>
                     </div>
-
-                    <div class="p-10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-secondary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] transition-all duration-500 group fade-up-element"
-                        style="transition-delay: 0.3s;">
-                        <div
-                            class="w-16 h-16 rounded-full bg-secondary-container/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                            <span
-                                class="material-symbols-outlined text-3xl text-secondary-container">auto_awesome</span>
+                    <div class="p-10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-secondary-container hover:shadow-[0_0_30px_rgba(0,242,255,0.2)] transition-all duration-500 group fade-up-element" style="transition-delay: 0.3s;">
+                        <div class="w-16 h-16 rounded-full bg-secondary-container/20 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <span class="material-symbols-outlined text-3xl text-secondary-container">auto_awesome</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase tracking-wider">Visión
-                            Genuina</h3>
-                        <p class="font-body text-gray-400 leading-relaxed text-lg">
-                            Asegurar que cada obra terminada logre conectar inmediatamente, proyectando una personalidad
-                            que resuene visualmente a niveles altísimos.
-                        </p>
+                        <h3 class="font-headline text-2xl font-bold text-white mb-4 uppercase tracking-wider">Visión Genuina</h3>
+                        <p class="font-body text-gray-400 leading-relaxed text-lg">Asegurar que cada obra terminada logre conectar inmediatamente, proyectando una personalidad que resuene visualmente a niveles altísimos.</p>
                     </div>
                 </div>
             </div>
-
-            <div
-                class="max-w-5xl mx-auto mt-32 text-center fade-up-element p-10 bg-gradient-to-b from-primary-container/10 to-transparent border-t border-primary-container/30 rounded-t-[50px]">
+            <div class="max-w-5xl mx-auto mt-32 text-center fade-up-element p-10 bg-gradient-to-b from-primary-container/10 to-transparent border-t border-primary-container/30 rounded-t-[50px]">
                 <p class="font-headline text-2xl md:text-4xl text-gray-300 font-light italic leading-relaxed">
-                    "3Dream Studios se mantendrá como el santuario donde la <span class="text-white font-bold">artesanía
-                        visual</span>, la paciencia y el talento humano convergen para dar forma a lo <span
-                        class="text-primary-container font-bold drop-shadow-[0_0_10px_rgba(0,242,255,0.5)]">incomparable</span>."
+                    "3Dream Studios se mantendrá como el santuario donde la <span class="text-white font-bold">artesanía visual</span>, la paciencia y el talento humano convergen para dar forma a lo <span class="text-primary-container font-bold drop-shadow-[0_0_10px_rgba(0,242,255,0.5)]">incomparable</span>."
                 </p>
             </div>
         </section>
     </main>
-    <footer class="bg-neutral-950 w-full border-t border-white/5 pt-20 pb-10 z-10 relative mt-auto">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="font-headline font-bold text-neutral-100 text-xl tracking-widest uppercase">3Dream
-                    Studios</span>
-                <p class="font-label text-xs tracking-widest uppercase text-neutral-500">
-                    © 2026 3DREAM STUDIOS. HECHO CON PASIÓN.
-                </p>
-            </div>
-            <div class="flex gap-8 border-none">
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="terms.html">Términos</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="privacy.html">Privacidad</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.cgtrader.com/designers/brandonurielcalixtog">CGTrader</a>
-                <a class="font-label text-xs tracking-widest uppercase text-neutral-500 hover:text-cyan-400 hover:scale-105 transition-all duration-300"
-                    href="https://www.instagram.com/3dreamstdio?igsh=ODYzbXdrb3FsaXFu" target="_blank">Instagram</a>
-            </div>
-            <button
-                class="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-neutral-500 hover:text-cyan-400 hover:border-cyan-400 hover:-translate-y-2 transition-all duration-300 shadow-[0_0_15px_rgba(0,242,255,0.1)]"
-                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                <span class="material-symbols-outlined">arrow_upward</span>
-            </button>
-        </div>
-    </footer>
-</body>
 
+    <div id="footer-root"></div>
+</body>
 </html>
