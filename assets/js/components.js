@@ -40,6 +40,7 @@
      */
     const NAV_LINKS = [
         { label: 'Galería', href: 'gallery.html' },
+        { label: 'WebAR Menús', href: 'index.html#webar-menus', highlight: true },
         { label: 'Universo', href: 'universe.html' },
         { label: 'Proceso', href: 'process.html' },
         { label: 'Archivo', href: 'archive.html' },
@@ -85,7 +86,13 @@
         if (!target) return;
 
         const desktopLinks = NAV_LINKS.map(link => {
-            const active = isCurrentPage(link.href);
+            const active = isCurrentPage(link.href.split('#')[0]);
+            if (link.highlight) {
+                return `<a class="relative inline-flex items-center gap-1.5 text-emerald-400 font-semibold hover:text-emerald-300 hover:scale-105 transition-all duration-300 group" href="${resolveHref(link.href)}">
+                    <span class="relative flex h-1.5 w-1.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span></span>
+                    ${link.label}
+                </a>`;
+            }
             const classes = active
                 ? 'text-cyan-400 border-b-2 border-cyan-400 font-semibold'
                 : 'text-neutral-400 font-medium hover:text-cyan-300 hover:scale-105';
@@ -93,6 +100,12 @@
         }).join('');
 
         const mobileLinks = NAV_LINKS.map(link => {
+            if (link.highlight) {
+                return `<a class="text-emerald-400 hover:text-emerald-300 transition-all duration-300 font-headline font-black text-3xl uppercase tracking-[0.1em] hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(16,185,129,0.8)] flex items-center gap-3" href="${resolveHref(link.href)}">
+                    <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+                    ${link.label}
+                </a>`;
+            }
             return `<a class="text-neutral-400 hover:text-cyan-300 transition-all duration-300 font-headline font-black text-3xl uppercase tracking-[0.1em] hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(0,242,255,0.8)]" href="${resolveHref(link.href)}">${link.label}</a>`;
         }).join('');
 
